@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* JAACK & CO Professional Design System 
+All colors MUST be HSL. Navy, Teal, Gold palette for authority and trust.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Background & Surface Colors */
+    --background: 210 30% 98%;
+    --foreground: 213 27% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 27% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 27% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors - JAACK Professional Palette */
+    --primary: 213 27% 12%;        /* Deep Navy - Authority */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 188 94% 37%;      /* Professional Teal */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 43 96% 56%;          /* Gold - Premium */
+    --accent-foreground: 213 27% 12%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Neutral System Colors */
+    --muted: 210 20% 95%;
+    --muted-foreground: 213 15% 45%;
 
-    --destructive: 0 84.2% 60.2%;
+    --subtle: 210 15% 92%;
+    --subtle-foreground: 213 20% 35%;
+
+    --border: 213 20% 88%;
+    --input: 213 20% 88%;
+    --ring: 188 94% 37%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 213 27% 12%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Design System Tokens */
+    --radius: 0.75rem;
 
-    --radius: 0.5rem;
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 27% 12%), hsl(213 27% 20%));
+    --gradient-secondary: linear-gradient(135deg, hsl(188 94% 37%), hsl(188 94% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 96% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 27% 12%) 0%, hsl(188 94% 37%) 100%);
+
+    /* Professional Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(213 27% 12% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(213 27% 12% / 0.1), 0 2px 4px -1px hsl(213 27% 12% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(213 27% 12% / 0.1), 0 4px 6px -2px hsl(213 27% 12% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(213 27% 12% / 0.1), 0 10px 10px -5px hsl(213 27% 12% / 0.04);
+
+    /* Animation Tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +84,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode for professional after-hours work */
+    --background: 213 27% 8%;
+    --foreground: 210 30% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 213 27% 10%;
+    --card-foreground: 210 30% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 213 27% 10%;
+    --popover-foreground: 210 30% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 30% 98%;
+    --primary-foreground: 213 27% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 188 94% 45%;
+    --secondary-foreground: 213 27% 8%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 43 96% 65%;
+    --accent-foreground: 213 27% 8%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 213 20% 15%;
+    --muted-foreground: 210 15% 65%;
 
-    --destructive: 0 62.8% 30.6%;
+    --subtle: 213 20% 18%;
+    --subtle-foreground: 210 15% 75%;
+
+    --border: 213 20% 18%;
+    --input: 213 20% 18%;
+    --ring: 188 94% 45%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 45%;
+    --success-foreground: 213 27% 8%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 213 27% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 27% 8%), hsl(213 27% 15%));
+    --gradient-secondary: linear-gradient(135deg, hsl(188 94% 45%), hsl(188 94% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(43 96% 65%), hsl(43 96% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 27% 8%) 0%, hsl(188 94% 25%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +142,61 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Professional Typography Scale */
+  .heading-xl {
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+  
+  .heading-sm {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl text-muted-foreground;
+  }
+  
+  .body-md {
+    @apply text-base md:text-lg text-muted-foreground;
+  }
+}
+
+@layer components {
+  /* Professional Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-secondary-hero {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent to-yellow-500 text-accent-foreground px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105;
+  }
+
+  /* Professional Cards */
+  .card-professional {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  /* Gradient Text Effects */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-yellow-500 bg-clip-text text-transparent;
   }
 }
