@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src={jaackLogo} 
                 alt="JAACK & CO Logo" 
-                className="h-8 w-auto"
+                className="h-12 w-auto opacity-90 filter brightness-110"
               />
             </div>
             <p className="text-primary-foreground/80 mb-4">
