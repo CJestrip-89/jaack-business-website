@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import jaackLogo from "@/assets/jaack-logo.jpg";
+import jaackLogo from "@/assets/jaack-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

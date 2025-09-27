@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import jaackLogo from "@/assets/jaack-logo.jpg";
+import jaackLogo from "@/assets/jaack-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
