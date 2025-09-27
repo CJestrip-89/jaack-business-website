@@ -46,7 +46,7 @@ const Navigation = () => {
             <img 
               src={jaackLogo} 
               alt="JAACK & CO Logo" 
-              className="h-14 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              className="h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
           </Link>
 
