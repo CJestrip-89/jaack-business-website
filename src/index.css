@@ -18,15 +18,15 @@ All colors MUST be HSL. Navy, Teal, Gold palette for authority and trust.
     --popover: 0 0% 100%;
     --popover-foreground: 213 27% 12%;
 
-    /* Brand Colors - JAACK Professional Palette */
-    --primary: 213 27% 12%;        /* Deep Navy - Authority */
+    /* Brand Colors - JAACK Logo-Matched Palette */
+    --primary: 220 40% 15%;        /* Rich Navy from logo */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 188 94% 37%;      /* Professional Teal */
+    --secondary: 180 65% 45%;      /* Sophisticated Teal accent */
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 43 96% 56%;          /* Gold - Premium */
-    --accent-foreground: 213 27% 12%;
+    --accent: 45 95% 60%;          /* Warm Gold highlight */
+    --accent-foreground: 220 40% 15%;
 
     /* Neutral System Colors */
     --muted: 210 20% 95%;
@@ -51,16 +51,16 @@ All colors MUST be HSL. Navy, Teal, Gold palette for authority and trust.
     --radius: 0.75rem;
 
     /* Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 27% 12%), hsl(213 27% 20%));
-    --gradient-secondary: linear-gradient(135deg, hsl(188 94% 37%), hsl(188 94% 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 96% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 27% 12%) 0%, hsl(188 94% 37%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(220 40% 15%), hsl(220 40% 25%));
+    --gradient-secondary: linear-gradient(135deg, hsl(180 65% 45%), hsl(180 65% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 95% 60%), hsl(45 95% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(180 65% 45%) 100%);
 
     /* Professional Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(213 27% 12% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(213 27% 12% / 0.1), 0 2px 4px -1px hsl(213 27% 12% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(213 27% 12% / 0.1), 0 4px 6px -2px hsl(213 27% 12% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(213 27% 12% / 0.1), 0 10px 10px -5px hsl(213 27% 12% / 0.04);
+    --shadow-sm: 0 1px 2px 0 hsl(220 40% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 40% 15% / 0.1), 0 2px 4px -1px hsl(220 40% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 40% 15% / 0.1), 0 4px 6px -2px hsl(220 40% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 40% 15% / 0.1), 0 10px 10px -5px hsl(220 40% 15% / 0.04);
 
     /* Animation Tokens */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,13 +95,13 @@ All colors MUST be HSL. Navy, Teal, Gold palette for authority and trust.
     --popover-foreground: 210 30% 98%;
 
     --primary: 210 30% 98%;
-    --primary-foreground: 213 27% 12%;
+    --primary-foreground: 220 40% 15%;
 
-    --secondary: 188 94% 45%;
-    --secondary-foreground: 213 27% 8%;
+    --secondary: 180 65% 55%;
+    --secondary-foreground: 220 40% 10%;
 
-    --accent: 43 96% 65%;
-    --accent-foreground: 213 27% 8%;
+    --accent: 45 95% 70%;
+    --accent-foreground: 220 40% 10%;
 
     --muted: 213 20% 15%;
     --muted-foreground: 210 15% 65%;
@@ -121,10 +121,10 @@ All colors MUST be HSL. Navy, Teal, Gold palette for authority and trust.
     --warning-foreground: 213 27% 8%;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 27% 8%), hsl(213 27% 15%));
-    --gradient-secondary: linear-gradient(135deg, hsl(188 94% 45%), hsl(188 94% 55%));
-    --gradient-accent: linear-gradient(135deg, hsl(43 96% 65%), hsl(43 96% 75%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 27% 8%) 0%, hsl(188 94% 25%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(220 40% 10%), hsl(220 40% 18%));
+    --gradient-secondary: linear-gradient(135deg, hsl(180 65% 50%), hsl(180 65% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 95% 65%), hsl(45 95% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 10%) 0%, hsl(180 65% 35%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
