@@ -11,8 +11,11 @@ const Hero = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-secondary/20" />
       <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
-      
+      <div
+        className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: "1s" }}
+      />
+
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-12">
         <div className="text-center mb-16">
           <h1 className="heading-xl text-white mb-6 animate-fade-in">
@@ -20,8 +23,10 @@ const Hero = () => {
             <span className="text-gradient-accent"> Opportunity</span>
           </h1>
           <p className="body-lg text-white/90 max-w-3xl mx-auto mb-8 animate-slide-up">
-            JAACK & CO connects growth-focused SMEs with impact-driven investors, 
-            creating sustainable partnerships that drive meaningful business transformation.
+            {/* JAACK & CO connects growth-focused SMEs with impact-driven investors, 
+            creating sustainable partnerships that drive meaningful business transformation. */}
+            JAACK & CO powers partnerships between ambitious SMEs and impact-focused investors — combining capital,
+            strategy, and long-term growth into one platform.
           </p>
         </div>
 
@@ -30,29 +35,26 @@ const Hero = () => {
           {/* For Businesses */}
           <div className="card-professional group relative overflow-hidden animate-scale-in">
             <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-              <img 
+              <img
                 src={heroBusinessImage}
-                alt="Professional business environment" 
+                alt="Professional business environment"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10 flex flex-col items-center text-center p-8">
               <div className="flex items-center justify-center mb-4">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <TrendingUp className="w-8 h-8 text-secondary mr-3 drop-shadow-lg" />
                 </motion.div>
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Businesses</h2>
               </div>
               <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
-                Access funding, strategic growth partnerships, and market expansion 
-                opportunities tailored to your business ambitions.
+                Access funding, strategic growth partnerships, and market expansion opportunities tailored to your
+                business ambitions.
               </p>
               <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -62,7 +64,7 @@ const Hero = () => {
                   </motion.div>
                   Funding Access & Capital Raising
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -72,7 +74,7 @@ const Hero = () => {
                   </motion.div>
                   Strategic Growth Partnerships
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -99,31 +101,31 @@ const Hero = () => {
           </div>
 
           {/* For Investors */}
-          <div className="card-professional group relative overflow-hidden animate-scale-in" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="card-professional group relative overflow-hidden animate-scale-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-              <img 
+              <img
                 src={heroInvestorsImage}
-                alt="Investment and growth visualization" 
+                alt="Investment and growth visualization"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10 flex flex-col items-center text-center p-8">
               <div className="flex items-center justify-center mb-4">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <motion.div whileHover={{ scale: 1.1, rotate: -5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <Users className="w-8 h-8 text-accent mr-3 drop-shadow-lg" />
                 </motion.div>
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Investors</h2>
               </div>
               <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
-                Discover vetted investment opportunities in high-growth SMEs with 
-                sustainable impact and strong returns potential.
+                Discover vetted investment opportunities in high-growth SMEs with sustainable impact and strong returns
+                potential.
               </p>
               <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -133,7 +135,7 @@ const Hero = () => {
                   </motion.div>
                   Curated Investment Opportunities
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -143,7 +145,7 @@ const Hero = () => {
                   </motion.div>
                   Impact-Driven Portfolio Building
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -174,7 +176,7 @@ const Hero = () => {
         <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <p className="text-white/80 mb-4">Trusted by ambitious businesses and impact-focused investors</p>
           <div className="flex justify-center items-center space-x-8 text-white/60">
-            <motion.div 
+            <motion.div
               className="text-center"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -183,7 +185,7 @@ const Hero = () => {
               <div className="text-sm">SMEs Funded</div>
             </motion.div>
             <div className="w-px h-12 bg-white/20" />
-            <motion.div 
+            <motion.div
               className="text-center"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -192,7 +194,7 @@ const Hero = () => {
               <div className="text-sm">Capital Raised</div>
             </motion.div>
             <div className="w-px h-12 bg-white/20" />
-            <motion.div 
+            <motion.div
               className="text-center"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
