@@ -4,12 +4,14 @@ import { ArrowRight, TrendingUp, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import heroBusinessImage from "@/assets/hero-business.jpg";
 import heroInvestorsImage from "@/assets/hero-investors.jpg";
+import GlobalNetworkBackground from "@/components/ui/GlobalNetworkBackground";
 
 const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-secondary/20" />
+      <GlobalNetworkBackground />
       <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl animate-float" />
       <div
         className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float"
