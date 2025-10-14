@@ -16,20 +16,20 @@ const Hero = () => {
         style={{ animationDelay: "1s" }}
       />
 
-      <div className="relative z-10 container mx-auto px-4 pt-20 md:pt-24 pb-8 md:pb-12">
-        <div className="text-center mb-8 md:mb-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 animate-fade-in leading-tight">
+      <div className="relative z-10 container mx-auto px-4 pt-20 md:pt-28 lg:pt-24 pb-8 md:pb-10 lg:pb-12">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-5 lg:mb-6 animate-fade-in leading-tight">
             Bridging Ambition with
             <span className="text-gradient-accent"> Opportunity</span>
           </h1>
-          <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto mb-6 md:mb-8 animate-slide-up px-2">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 md:mb-7 lg:mb-8 animate-slide-up px-2">
             JAACK & CO powers partnerships between ambitious SMEs and impact-focused investors — combining capital,
             strategy, and long-term growth into one platform.
           </p>
         </div>
 
         {/* Dual Lane Cards */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* For Businesses */}
           <div className="card-professional group relative overflow-hidden animate-scale-in">
             <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
@@ -40,18 +40,18 @@ const Hero = () => {
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
-            <div className="relative z-10 flex flex-col items-center text-center p-4 md:p-8">
+            <div className="relative z-10 flex flex-col items-center text-center p-4 md:p-6 lg:p-8">
               <div className="flex items-center justify-center mb-3 md:mb-4">
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary mr-2 md:mr-3 drop-shadow-lg" />
+                  <TrendingUp className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-secondary mr-2 md:mr-2.5 lg:mr-3 drop-shadow-lg" />
                 </motion.div>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground drop-shadow-md">For Businesses</h2>
+                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">For Businesses</h2>
               </div>
-              <p className="text-sm md:text-base mb-4 md:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
+              <p className="text-sm md:text-sm lg:text-base mb-4 md:mb-5 lg:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
                 Access funding, strategic growth partnerships, and market expansion opportunities tailored to your
                 business ambitions.
               </p>
-              <ul className="space-y-1.5 md:space-y-2 mb-6 md:mb-8 text-xs md:text-sm text-foreground/80 drop-shadow-sm max-w-md mx-auto">
+              <ul className="space-y-1.5 md:space-y-2 mb-6 md:mb-6 lg:mb-8 text-xs md:text-sm lg:text-base text-foreground/80 drop-shadow-sm max-w-md mx-auto">
                 <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
@@ -89,10 +89,10 @@ const Hero = () => {
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <Button className="btn-hero w-full group text-xs md:text-sm lg:text-base py-2 md:py-3">
-                    <span className="hidden sm:inline">Explore Business Solutions</span>
-                    <span className="sm:hidden">Business Solutions</span>
-                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1.5 md:ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Button className="btn-hero w-full group text-xs md:text-sm lg:text-base py-2 md:py-2.5 lg:py-3">
+                    <span className="hidden sm:inline md:hidden lg:inline">Explore Business Solutions</span>
+                    <span className="sm:hidden md:inline lg:hidden">Business Solutions</span>
+                    <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 ml-1.5 md:ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </motion.div>
               </Link>
@@ -112,18 +112,18 @@ const Hero = () => {
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
-            <div className="relative z-10 flex flex-col items-center text-center p-4 md:p-8">
+            <div className="relative z-10 flex flex-col items-center text-center p-4 md:p-6 lg:p-8">
               <div className="flex items-center justify-center mb-3 md:mb-4">
                 <motion.div whileHover={{ scale: 1.1, rotate: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Users className="w-6 h-6 md:w-8 md:h-8 text-accent mr-2 md:mr-3 drop-shadow-lg" />
+                  <Users className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-accent mr-2 md:mr-2.5 lg:mr-3 drop-shadow-lg" />
                 </motion.div>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground drop-shadow-md">For Investors</h2>
+                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">For Investors</h2>
               </div>
-              <p className="text-sm md:text-base mb-4 md:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
+              <p className="text-sm md:text-sm lg:text-base mb-4 md:mb-5 lg:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
                 Discover vetted investment opportunities in high-growth SMEs with sustainable impact and strong returns
                 potential.
               </p>
-              <ul className="space-y-1.5 md:space-y-2 mb-6 md:mb-8 text-xs md:text-sm text-foreground/80 drop-shadow-sm max-w-md mx-auto">
+              <ul className="space-y-1.5 md:space-y-2 mb-6 md:mb-6 lg:mb-8 text-xs md:text-sm lg:text-base text-foreground/80 drop-shadow-sm max-w-md mx-auto">
                 <motion.li
                   className="flex items-center justify-center"
                   whileHover={{ x: 5 }}
@@ -161,10 +161,10 @@ const Hero = () => {
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <Button className="btn-accent w-full group text-xs md:text-sm lg:text-base py-2 md:py-3">
-                    <span className="hidden sm:inline">Explore Investment Opportunities</span>
-                    <span className="sm:hidden">Investment Opportunities</span>
-                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1.5 md:ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Button className="btn-accent w-full group text-xs md:text-sm lg:text-base py-2 md:py-2.5 lg:py-3">
+                    <span className="hidden sm:inline md:hidden lg:inline">Explore Investment Opportunities</span>
+                    <span className="sm:hidden md:inline lg:hidden">Investment Opportunities</span>
+                    <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 ml-1.5 md:ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </motion.div>
               </Link>
@@ -173,36 +173,36 @@ const Hero = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="text-center mt-8 md:mt-16 animate-fade-in max-w-4xl mx-auto px-2" style={{ animationDelay: "0.4s" }}>
-          <div className="card-professional p-4 md:p-8 backdrop-blur-md bg-white/5 border-white/10">
+        <div className="text-center mt-8 md:mt-12 lg:mt-16 animate-fade-in max-w-4xl mx-auto px-2" style={{ animationDelay: "0.4s" }}>
+          <div className="card-professional p-4 md:p-6 lg:p-8 backdrop-blur-md bg-white/5 border-white/10">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-1 md:mb-2">Backed by Results</h2>
-            <p className="text-sm md:text-base text-white/80 mb-6 md:mb-8">Trusted by ambitious businesses and impact-focused investors</p>
-            <div className="flex justify-center items-center space-x-6 md:space-x-12 text-white/70">
+            <p className="text-sm md:text-base text-white/80 mb-6 md:mb-7 lg:mb-8">Trusted by ambitious businesses and impact-focused investors</p>
+            <div className="flex justify-center items-center space-x-6 md:space-x-10 lg:space-x-12 text-white/70">
               <motion.div
                 className="text-center"
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-2xl md:text-4xl font-bold text-white mb-0.5 md:mb-1">50+</div>
-                <div className="text-xs md:text-base">SMEs Funded</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 md:mb-1">50+</div>
+                <div className="text-xs md:text-sm lg:text-base">SMEs Funded</div>
               </motion.div>
-              <div className="w-px h-12 md:h-16 bg-white/20" />
+              <div className="w-px h-12 md:h-14 lg:h-16 bg-white/20" />
               <motion.div
                 className="text-center"
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-2xl md:text-4xl font-bold text-white mb-0.5 md:mb-1">€25M+</div>
-                <div className="text-xs md:text-base">Capital Raised</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 md:mb-1">€25M+</div>
+                <div className="text-xs md:text-sm lg:text-base">Capital Raised</div>
               </motion.div>
-              <div className="w-px h-12 md:h-16 bg-white/20" />
+              <div className="w-px h-12 md:h-14 lg:h-16 bg-white/20" />
               <motion.div
                 className="text-center"
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-2xl md:text-4xl font-bold text-white mb-0.5 md:mb-1">15+</div>
-                <div className="text-xs md:text-base">Active Investors</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 md:mb-1">15+</div>
+                <div className="text-xs md:text-sm lg:text-base">Active Investors</div>
               </motion.div>
             </div>
           </div>
