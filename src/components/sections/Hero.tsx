@@ -35,16 +35,17 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10">
               <div className="flex items-center mb-4">
-                <TrendingUp className="w-8 h-8 text-secondary mr-3" />
-                <h2 className="heading-sm text-foreground">For Businesses</h2>
+                <TrendingUp className="w-8 h-8 text-secondary mr-3 drop-shadow-lg" />
+                <h2 className="heading-sm text-foreground drop-shadow-md">For Businesses</h2>
               </div>
-              <p className="body-md mb-6 text-foreground/80">
+              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm">
                 Access funding, strategic growth partnerships, and market expansion 
                 opportunities tailored to your business ambitions.
               </p>
-              <ul className="space-y-2 mb-8 text-foreground/70">
+              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm">
                 <li className="flex items-center">
                   <ArrowRight className="w-4 h-4 text-secondary mr-2" />
                   Funding Access & Capital Raising
@@ -76,16 +77,17 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10">
               <div className="flex items-center mb-4">
-                <Users className="w-8 h-8 text-accent mr-3" />
-                <h2 className="heading-sm text-foreground">For Investors</h2>
+                <Users className="w-8 h-8 text-accent mr-3 drop-shadow-lg" />
+                <h2 className="heading-sm text-foreground drop-shadow-md">For Investors</h2>
               </div>
-              <p className="body-md mb-6 text-foreground/80">
+              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm">
                 Discover vetted investment opportunities in high-growth SMEs with 
                 sustainable impact and strong returns potential.
               </p>
-              <ul className="space-y-2 mb-8 text-foreground/70">
+              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm">
                 <li className="flex items-center">
                   <ArrowRight className="w-4 h-4 text-accent mr-2" />
                   Curated Investment Opportunities
