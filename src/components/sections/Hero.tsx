@@ -36,30 +36,30 @@ const Hero = () => {
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
-            <div className="relative z-10">
-              <div className="flex items-center mb-4">
+            <div className="relative z-10 flex flex-col items-center text-center p-8">
+              <div className="flex items-center justify-center mb-4">
                 <TrendingUp className="w-8 h-8 text-secondary mr-3 drop-shadow-lg" />
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Businesses</h2>
               </div>
-              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm">
+              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
                 Access funding, strategic growth partnerships, and market expansion 
                 opportunities tailored to your business ambitions.
               </p>
-              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm">
-                <li className="flex items-center">
+              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-secondary mr-2" />
                   Funding Access & Capital Raising
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-secondary mr-2" />
                   Strategic Growth Partnerships
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-secondary mr-2" />
                   Market Expansion Support
                 </li>
               </ul>
-              <Link to="/businesses">
+              <Link to="/businesses" className="w-full max-w-md mx-auto block">
                 <Button className="btn-hero w-full group">
                   Explore Business Solutions
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -78,30 +78,30 @@ const Hero = () => {
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
-            <div className="relative z-10">
-              <div className="flex items-center mb-4">
+            <div className="relative z-10 flex flex-col items-center text-center p-8">
+              <div className="flex items-center justify-center mb-4">
                 <Users className="w-8 h-8 text-accent mr-3 drop-shadow-lg" />
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Investors</h2>
               </div>
-              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm">
+              <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
                 Discover vetted investment opportunities in high-growth SMEs with 
                 sustainable impact and strong returns potential.
               </p>
-              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm">
-                <li className="flex items-center">
+              <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-accent mr-2" />
                   Curated Investment Opportunities
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-accent mr-2" />
                   Impact-Driven Portfolio Building
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center justify-center">
                   <ArrowRight className="w-4 h-4 text-accent mr-2" />
                   Professional Due Diligence
                 </li>
               </ul>
-              <Link to="/investors">
+              <Link to="/investors" className="w-full max-w-md mx-auto block">
                 <Button className="btn-accent w-full group">
                   Explore Investment Opportunities
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
