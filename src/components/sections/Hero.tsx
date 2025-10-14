@@ -173,35 +173,38 @@ const Hero = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <p className="text-white/80 mb-4">Trusted by ambitious businesses and impact-focused investors</p>
-          <div className="flex justify-center items-center space-x-8 text-white/60">
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-2xl font-bold text-white">50+</div>
-              <div className="text-sm">SMEs Funded</div>
-            </motion.div>
-            <div className="w-px h-12 bg-white/20" />
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-2xl font-bold text-white">€25M+</div>
-              <div className="text-sm">Capital Raised</div>
-            </motion.div>
-            <div className="w-px h-12 bg-white/20" />
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-2xl font-bold text-white">15+</div>
-              <div className="text-sm">Active Investors</div>
-            </motion.div>
+        <div className="text-center mt-16 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: "0.4s" }}>
+          <div className="card-professional p-8 backdrop-blur-md bg-white/5 border-white/10">
+            <h2 className="heading-md text-white mb-2">Backed by Results</h2>
+            <p className="text-white/80 mb-8">Trusted by ambitious businesses and impact-focused investors</p>
+            <div className="flex justify-center items-center space-x-12 text-white/70">
+              <motion.div
+                className="text-center"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-4xl font-bold text-white mb-1">50+</div>
+                <div className="text-base">SMEs Funded</div>
+              </motion.div>
+              <div className="w-px h-16 bg-white/20" />
+              <motion.div
+                className="text-center"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-4xl font-bold text-white mb-1">€25M+</div>
+                <div className="text-base">Capital Raised</div>
+              </motion.div>
+              <div className="w-px h-16 bg-white/20" />
+              <motion.div
+                className="text-center"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="text-4xl font-bold text-white mb-1">15+</div>
+                <div className="text-base">Active Investors</div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
