@@ -29,7 +29,7 @@ const Navigation = () => {
             location.pathname === item.href 
               ? "text-secondary font-semibold" 
               : "text-foreground"
-          } ${mobile ? "block py-2 text-lg" : ""}`}
+          } ${mobile ? "block py-2 text-lg" : "text-sm md:text-sm lg:text-base"}`}
         >
           {item.label}
         </Link>
@@ -39,31 +39,31 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-3 md:px-4 lg:px-4">
+        <div className="flex items-center justify-between h-14 md:h-16 lg:h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3">
             <img 
               src={jaackLogo} 
               alt="JAACK & CO Logo" 
-              className="h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              className="h-16 md:h-18 lg:h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 md:space-x-5 lg:space-x-8">
             <NavLinks />
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
             <Link to="/businesses">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="text-xs md:text-xs lg:text-sm px-2 md:px-3 lg:px-4 py-1.5 md:py-2">
                 For Businesses
               </Button>
             </Link>
             <Link to="/investors">
-              <Button className="btn-hero text-sm px-4 py-2">
+              <Button className="btn-hero text-xs md:text-xs lg:text-sm px-2 md:px-3 lg:px-4 py-1.5 md:py-2">
                 For Investors
               </Button>
             </Link>
