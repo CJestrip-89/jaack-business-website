@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users } from "lucide-react";
+import { motion } from "framer-motion";
 import heroBusinessImage from "@/assets/hero-business.jpg";
 import heroInvestorsImage from "@/assets/hero-investors.jpg";
 
@@ -38,7 +39,12 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10 flex flex-col items-center text-center p-8">
               <div className="flex items-center justify-center mb-4">
-                <TrendingUp className="w-8 h-8 text-secondary mr-3 drop-shadow-lg" />
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <TrendingUp className="w-8 h-8 text-secondary mr-3 drop-shadow-lg" />
+                </motion.div>
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Businesses</h2>
               </div>
               <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
@@ -46,24 +52,48 @@ const Hero = () => {
                 opportunities tailored to your business ambitions.
               </p>
               <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                  </motion.div>
                   Funding Access & Capital Raising
-                </li>
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                </motion.li>
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                  </motion.div>
                   Strategic Growth Partnerships
-                </li>
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                </motion.li>
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-secondary mr-2" />
+                  </motion.div>
                   Market Expansion Support
-                </li>
+                </motion.li>
               </ul>
               <Link to="/businesses" className="w-full max-w-md mx-auto block">
-                <Button className="btn-hero w-full group">
-                  Explore Business Solutions
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <Button className="btn-hero w-full group">
+                    Explore Business Solutions
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </motion.div>
               </Link>
             </div>
           </div>
@@ -80,7 +110,12 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
             <div className="relative z-10 flex flex-col items-center text-center p-8">
               <div className="flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-accent mr-3 drop-shadow-lg" />
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Users className="w-8 h-8 text-accent mr-3 drop-shadow-lg" />
+                </motion.div>
                 <h2 className="heading-sm text-foreground drop-shadow-md">For Investors</h2>
               </div>
               <p className="body-md mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto">
@@ -88,24 +123,48 @@ const Hero = () => {
                 sustainable impact and strong returns potential.
               </p>
               <ul className="space-y-2 mb-8 text-foreground/80 drop-shadow-sm max-w-md mx-auto">
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                  </motion.div>
                   Curated Investment Opportunities
-                </li>
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                </motion.li>
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                  </motion.div>
                   Impact-Driven Portfolio Building
-                </li>
-                <li className="flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                </motion.li>
+                <motion.li 
+                  className="flex items-center justify-center"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <motion.div whileHover={{ scale: 1.2 }}>
+                    <ArrowRight className="w-4 h-4 text-accent mr-2" />
+                  </motion.div>
                   Professional Due Diligence
-                </li>
+                </motion.li>
               </ul>
               <Link to="/investors" className="w-full max-w-md mx-auto block">
-                <Button className="btn-accent w-full group">
-                  Explore Investment Opportunities
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <Button className="btn-accent w-full group">
+                    Explore Investment Opportunities
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </motion.div>
               </Link>
             </div>
           </div>
@@ -115,20 +174,32 @@ const Hero = () => {
         <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <p className="text-white/80 mb-4">Trusted by ambitious businesses and impact-focused investors</p>
           <div className="flex justify-center items-center space-x-8 text-white/60">
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="text-2xl font-bold text-white">50+</div>
               <div className="text-sm">SMEs Funded</div>
-            </div>
+            </motion.div>
             <div className="w-px h-12 bg-white/20" />
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="text-2xl font-bold text-white">€25M+</div>
               <div className="text-sm">Capital Raised</div>
-            </div>
+            </motion.div>
             <div className="w-px h-12 bg-white/20" />
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="text-2xl font-bold text-white">15+</div>
               <div className="text-sm">Active Investors</div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
