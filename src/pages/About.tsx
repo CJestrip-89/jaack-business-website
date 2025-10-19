@@ -2,7 +2,6 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Award, TrendingUp } from "lucide-react";
-import GlobalNetworkBackground from "@/components/ui/GlobalNetworkBackground";
 
 const About = () => {
   return (
@@ -10,9 +9,8 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-primary relative overflow-hidden">
-        <GlobalNetworkBackground />
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="pt-20 pb-16 bg-gradient-primary">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">
               About JAACK & CO
