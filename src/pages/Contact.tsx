@@ -44,7 +44,8 @@ const Contact = () => {
     try {
       const { data: response, error } = await supabase.functions.invoke('submit-contact-form', {
         body: {
-          name: `${data.firstName} ${data.lastName}`,
+          firstName: data.firstName,
+          lastName: data.lastName,
           email: data.email,
           phone: data.phone,
           company: data.company,

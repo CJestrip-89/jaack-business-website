@@ -7,7 +7,8 @@ const corsHeaders = {
 };
 
 interface ContactFormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone?: string;
   company?: string;
@@ -44,13 +45,13 @@ const handler = async (req: Request): Promise<Response> => {
         },
         body: JSON.stringify({
           fields: {
-            Name: formData.name,
+            First_Name: formData.firstName,
+            Last_Name: formData.lastName,
             Email: formData.email,
-            Phone: formData.phone || "",
-            Company: formData.company || "",
-            "Inquiry Type": formData.inquiry_type,
+            Phone_Number: formData.phone || "",
+            Company_Organization: formData.company || "",
+            Inquiry_Type: formData.inquiry_type,
             Message: formData.message,
-            "Submitted At": new Date().toISOString(),
           },
         }),
       }
