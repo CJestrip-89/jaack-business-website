@@ -6,8 +6,63 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+const contactFormSchema = z.object({
+  firstName: z.string().min(1, "First name is required").max(100),
+  lastName: z.string().min(1, "Last name is required").max(100),
+  email: z.string().email("Invalid email address").max(255),
+  phone: z.string().max(50).optional(),
+  company: z.string().max(200).optional(),
+  inquiryType: z.string().min(1, "Please select an inquiry type"),
+  message: z.string().min(10, "Message must be at least 10 characters").max(1000),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      company: "",
+      inquiryType: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const { data: response, error } = await supabase.functions.invoke('submit-contact-form', {
+        body: {
+          name: `${data.firstName} ${data.lastName}`,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          inquiry_type: data.inquiryType,
+          message: data.message,
+        },
+      });
+
+      if (error) throw error;
+
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to send message. Please try again.");
+    }
+  };
+
   return (
     <>
       <Navigation />
@@ -37,70 +92,134 @@ const Contact = () => {
               <Card className="card-professional">
                 <CardContent className="p-8">
                   <h2 className="heading-md mb-6">Send us a message</h2>
-                  <form className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="first-name">First Name *</Label>
-                        <Input id="first-name" placeholder="John" required />
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="firstName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>First Name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="John" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="lastName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Last Name *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Doe" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
                       </div>
-                      <div>
-                        <Label htmlFor="last-name">Last Name *</Label>
-                        <Input id="last-name" placeholder="Doe" required />
-                      </div>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input id="email" type="email" placeholder="john@company.com" required />
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email Address *</FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="john@company.com" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone Number</FormLabel>
+                              <FormControl>
+                                <Input type="tel" placeholder="+1 (555) 123-4567" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
                       </div>
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
-                      </div>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="company">Company/Organization</Label>
-                        <Input id="company" placeholder="Your company name" />
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Company/Organization</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your company name" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="inquiryType"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Inquiry Type *</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="Select inquiry type" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  <SelectItem value="business-funding">Business Funding</SelectItem>
+                                  <SelectItem value="investor-opportunities">Investment Opportunities</SelectItem>
+                                  <SelectItem value="partnership">Partnership Inquiry</SelectItem>
+                                  <SelectItem value="general">General Information</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
                       </div>
-                      <div>
-                        <Label htmlFor="inquiry-type">Inquiry Type *</Label>
-                        <select 
-                          id="inquiry-type" 
-                          required
-                          className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                        >
-                          <option value="">Select inquiry type</option>
-                          <option value="business-funding">Business Funding</option>
-                          <option value="investor-opportunities">Investment Opportunities</option>
-                          <option value="partnership">Partnership Inquiry</option>
-                          <option value="general">General Information</option>
-                        </select>
-                      </div>
-                    </div>
 
-                    <div>
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea 
-                        id="message" 
-                        placeholder="Tell us about your business, funding needs, or investment interests..."
-                        className="min-h-[150px]"
-                        required 
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message *</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Tell us about your business, funding needs, or investment interests..."
+                                className="min-h-[150px]"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <div className="text-center">
-                      <Button className="btn-hero px-12">
-                        Send Message
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                      <p className="text-sm text-muted-foreground mt-4">
-                        We typically respond within 24 hours during business days.
-                      </p>
-                    </div>
-                  </form>
+                      <div className="text-center">
+                        <Button type="submit" className="btn-hero px-12" disabled={form.formState.isSubmitting}>
+                          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                        <p className="text-sm text-muted-foreground mt-4">
+                          We typically respond within 24 hours during business days.
+                        </p>
+                      </div>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>
