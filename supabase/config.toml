@@ -2,3 +2,6 @@ project_id = "yzrcnfatyrgdmaiahaou"
 
 [functions.submit-contact-form]
 verify_jwt = false
+
+[functions.submit-investor-form]
+verify_jwt = false

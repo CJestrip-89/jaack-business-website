@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,8 +8,44 @@ import { TrendingUp, Shield, Target, ArrowRight, CheckCircle } from "lucide-reac
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import heroInvestorsImage from "@/assets/hero-investors.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Investors = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullName: formData.get('full-name') as string,
+      professionalTitle: formData.get('title') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      organization: formData.get('organization') as string,
+      investmentSize: formData.get('ticket-size') as string,
+      investmentFocus: formData.get('investment-focus') as string,
+      investmentExperience: formData.get('experience') as string,
+    };
+
+    try {
+      const { data: result, error } = await supabase.functions.invoke('submit-investor-form', {
+        body: data,
+      });
+
+      if (error) throw error;
+
+      toast.success("Application submitted successfully! We'll be in touch soon.");
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Failed to submit application. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <>
       <Navigation />
@@ -173,44 +210,45 @@ const Investors = () => {
 
             <Card className="card-professional">
               <CardContent className="p-8">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="full-name">Full Name *</Label>
-                      <Input id="full-name" placeholder="Your full name" required />
+                      <Input id="full-name" name="full-name" placeholder="Your full name" required />
                     </div>
                     <div>
                       <Label htmlFor="title">Professional Title</Label>
-                      <Input id="title" placeholder="e.g., Managing Partner, CEO" />
+                      <Input id="title" name="title" placeholder="e.g., Managing Partner, CEO" />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" type="email" placeholder="investor@company.com" required />
+                      <Input id="email" name="email" type="email" placeholder="investor@company.com" required />
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                      <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="organization">Organization</Label>
-                      <Input id="organization" placeholder="Investment firm, family office, etc." />
+                      <Input id="organization" name="organization" placeholder="Investment firm, family office, etc." />
                     </div>
                     <div>
                       <Label htmlFor="ticket-size">Typical Investment Size</Label>
-                      <Input id="ticket-size" placeholder="e.g., €100K - €1M" />
+                      <Input id="ticket-size" name="ticket-size" placeholder="e.g., €100K - €1M" />
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="investment-focus">Investment Focus & Criteria</Label>
                     <Textarea 
-                      id="investment-focus" 
+                      id="investment-focus"
+                      name="investment-focus"
                       placeholder="Tell us about your investment preferences, sectors of interest, and criteria..."
                       className="min-h-[120px]"
                     />
@@ -219,15 +257,16 @@ const Investors = () => {
                   <div>
                     <Label htmlFor="experience">Investment Experience</Label>
                     <Textarea 
-                      id="experience" 
+                      id="experience"
+                      name="experience"
                       placeholder="Brief overview of your investment background and experience..."
                       className="min-h-[100px]"
                     />
                   </div>
 
                   <div className="text-center">
-                    <Button className="btn-accent px-12">
-                      Submit Application
+                    <Button type="submit" className="btn-accent px-12" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                     <p className="text-sm text-muted-foreground mt-4">
