@@ -32,7 +32,8 @@ const Investors = () => {
     setIsSubmitting(true);
     setErrors({});
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget; // Store form reference before async operations
+    const formData = new FormData(form);
     const data = {
       fullName: formData.get('full-name') as string,
       professionalTitle: formData.get('title') as string,
@@ -62,7 +63,7 @@ const Investors = () => {
       // The result should contain {success: true, message: "...", recordId: "..."}
       if (result && typeof result === 'object' && 'success' in result && result.success) {
         toast.success("Application submitted successfully! We'll be in touch soon.");
-        e.currentTarget.reset();
+        form.reset();
         setErrors({});
       } else {
         const errorMsg = (result && typeof result === 'object' && 'error' in result) 
