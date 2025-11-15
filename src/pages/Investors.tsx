@@ -10,13 +10,27 @@ import Footer from "@/components/layout/Footer";
 import heroInvestorsImage from "@/assets/hero-investors.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { z } from "zod";
+
+const investorFormSchema = z.object({
+  fullName: z.string().trim().min(1, "Full name is required").max(100, "Full name must be less than 100 characters"),
+  professionalTitle: z.string().trim().min(1, "Professional title is required").max(100, "Professional title must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  phone: z.string().trim().min(1, "Phone number is required").max(20, "Phone number must be less than 20 characters"),
+  organization: z.string().trim().min(1, "Organization is required").max(100, "Organization must be less than 100 characters"),
+  investmentSize: z.string().trim().min(1, "Investment size is required"),
+  investmentFocus: z.string().trim().min(1, "Investment focus is required").max(500, "Investment focus must be less than 500 characters"),
+  investmentExperience: z.string().trim().min(1, "Investment experience is required").max(1000, "Investment experience must be less than 1000 characters"),
+});
 
 const Investors = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrors({});
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -31,8 +45,11 @@ const Investors = () => {
     };
 
     try {
+      // Validate form data
+      const validatedData = investorFormSchema.parse(data);
+
       const { data: result, error } = await supabase.functions.invoke('submit-investor-form', {
-        body: data,
+        body: validatedData,
       });
 
       if (error) throw error;
@@ -40,8 +57,19 @@ const Investors = () => {
       toast.success("Application submitted successfully! We'll be in touch soon.");
       e.currentTarget.reset();
     } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error("Failed to submit application. Please try again.");
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0] as string] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+        toast.error("Please fill in all required fields correctly");
+      } else {
+        console.error('Error submitting form:', error);
+        toast.error("Failed to submit application. Please try again.");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -215,10 +243,12 @@ const Investors = () => {
                     <div>
                       <Label htmlFor="full-name">Full Name *</Label>
                       <Input id="full-name" name="full-name" placeholder="Your full name" required />
+                      {errors.fullName && <p className="text-sm text-destructive mt-1">{errors.fullName}</p>}
                     </div>
                     <div>
-                      <Label htmlFor="title">Professional Title</Label>
-                      <Input id="title" name="title" placeholder="e.g., Managing Partner, CEO" />
+                      <Label htmlFor="title">Professional Title *</Label>
+                      <Input id="title" name="title" placeholder="e.g., Managing Partner, CEO" required />
+                      {errors.professionalTitle && <p className="text-sm text-destructive mt-1">{errors.professionalTitle}</p>}
                     </div>
                   </div>
 
@@ -226,42 +256,50 @@ const Investors = () => {
                     <div>
                       <Label htmlFor="email">Email Address *</Label>
                       <Input id="email" name="email" type="email" placeholder="investor@company.com" required />
+                      {errors.email && <p className="text-sm text-destructive mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" />
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" required />
+                      {errors.phone && <p className="text-sm text-destructive mt-1">{errors.phone}</p>}
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="organization">Organization</Label>
-                      <Input id="organization" name="organization" placeholder="Investment firm, family office, etc." />
+                      <Label htmlFor="organization">Organization *</Label>
+                      <Input id="organization" name="organization" placeholder="Investment firm, family office, etc." required />
+                      {errors.organization && <p className="text-sm text-destructive mt-1">{errors.organization}</p>}
                     </div>
                     <div>
-                      <Label htmlFor="ticket-size">Typical Investment Size</Label>
-                      <Input id="ticket-size" name="ticket-size" placeholder="e.g., €100K - €1M" />
+                      <Label htmlFor="ticket-size">Typical Investment Size *</Label>
+                      <Input id="ticket-size" name="ticket-size" placeholder="e.g., €100K - €1M" required />
+                      {errors.investmentSize && <p className="text-sm text-destructive mt-1">{errors.investmentSize}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="investment-focus">Investment Focus & Criteria</Label>
+                    <Label htmlFor="investment-focus">Investment Focus & Criteria *</Label>
                     <Textarea 
                       id="investment-focus"
                       name="investment-focus"
                       placeholder="Tell us about your investment preferences, sectors of interest, and criteria..."
                       className="min-h-[120px]"
+                      required
                     />
+                    {errors.investmentFocus && <p className="text-sm text-destructive mt-1">{errors.investmentFocus}</p>}
                   </div>
 
                   <div>
-                    <Label htmlFor="experience">Investment Experience</Label>
+                    <Label htmlFor="experience">Investment Experience *</Label>
                     <Textarea 
                       id="experience"
                       name="experience"
                       placeholder="Brief overview of your investment background and experience..."
                       className="min-h-[100px]"
+                      required
                     />
+                    {errors.investmentExperience && <p className="text-sm text-destructive mt-1">{errors.investmentExperience}</p>}
                   </div>
 
                   <div className="text-center">
