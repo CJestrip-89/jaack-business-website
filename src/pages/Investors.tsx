@@ -54,8 +54,14 @@ const Investors = () => {
 
       if (error) throw error;
 
-      toast.success("Application submitted successfully! We'll be in touch soon.");
-      e.currentTarget.reset();
+      // Check if the result indicates success
+      if (result?.success) {
+        toast.success("Application submitted successfully! We'll be in touch soon.");
+        e.currentTarget.reset();
+        setErrors({});
+      } else {
+        throw new Error(result?.error || "Failed to submit application");
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Record<string, string> = {};
