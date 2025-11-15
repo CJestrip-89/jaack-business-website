@@ -52,15 +52,23 @@ const Investors = () => {
         body: validatedData,
       });
 
-      if (error) throw error;
+      console.log('Function response:', { result, error });
 
-      // Check if the result indicates success
-      if (result?.success) {
+      if (error) {
+        console.error('Supabase function error:', error);
+        throw error;
+      }
+
+      // The result should contain {success: true, message: "...", recordId: "..."}
+      if (result && typeof result === 'object' && 'success' in result && result.success) {
         toast.success("Application submitted successfully! We'll be in touch soon.");
         e.currentTarget.reset();
         setErrors({});
       } else {
-        throw new Error(result?.error || "Failed to submit application");
+        const errorMsg = (result && typeof result === 'object' && 'error' in result) 
+          ? String(result.error) 
+          : "Failed to submit application";
+        throw new Error(errorMsg);
       }
     } catch (error) {
       if (error instanceof z.ZodError) {
