@@ -56,7 +56,6 @@ const handler = async (req: Request): Promise<Response> => {
           Investment_Size: formData.investmentSize,
           Investment_Focus: formData.investmentFocus,
           Investment_Experience: formData.investmentExperience,
-          Submitted_at: new Date().toISOString(),
         },
       }),
     });
