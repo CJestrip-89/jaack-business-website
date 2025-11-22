@@ -42,7 +42,7 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
-      const { data: response, error } = await supabase.functions.invoke('submit-contact-form', {
+      const { data: response, error } = await supabase.functions.invoke("submit-contact-form", {
         body: {
           firstName: data.firstName,
           lastName: data.lastName,
@@ -67,17 +67,15 @@ const Contact = () => {
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-xl text-white mb-6">
-              Get In Touch
-            </h1>
+            <h1 className="heading-xl text-white mb-6">Let's Build Something Together</h1>
             <p className="body-lg text-white/90">
-              Ready to explore funding opportunities or discuss investment partnerships? 
-              Our team is here to help you achieve your business goals.
+              Whether you need funding, investors, or business support, JAACK & CO is ready to help you grow. Reach out
+              and our team will get back to you soon.
             </p>
           </div>
         </div>
@@ -87,7 +85,6 @@ const Contact = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
-            
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="card-professional">
@@ -199,7 +196,7 @@ const Contact = () => {
                           <FormItem>
                             <FormLabel>Message *</FormLabel>
                             <FormControl>
-                              <Textarea 
+                              <Textarea
                                 placeholder="Tell us about your business, funding needs, or investment interests..."
                                 className="min-h-[150px]"
                                 {...field}
@@ -236,9 +233,12 @@ const Contact = () => {
                       <div>
                         <div className="font-medium mb-1">London Office</div>
                         <div className="text-sm text-muted-foreground">
-                          25 Bank Street<br />
-                          Canary Wharf<br />
-                          London E14 5JP<br />
+                          25 Bank Street
+                          <br />
+                          Canary Wharf
+                          <br />
+                          London E14 5JP
+                          <br />
                           United Kingdom
                         </div>
                       </div>
@@ -248,9 +248,7 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-secondary mr-3 mt-1" />
                       <div>
                         <div className="font-medium mb-1">Phone</div>
-                        <div className="text-sm text-muted-foreground">
-                          +44 20 7946 0958
-                        </div>
+                        <div className="text-sm text-muted-foreground">+44 20 7946 0958</div>
                       </div>
                     </div>
 
@@ -258,9 +256,7 @@ const Contact = () => {
                       <Mail className="w-5 h-5 text-secondary mr-3 mt-1" />
                       <div>
                         <div className="font-medium mb-1">Email</div>
-                        <div className="text-sm text-muted-foreground">
-                          hello@jaackandco.com
-                        </div>
+                        <div className="text-sm text-muted-foreground">hello@jaackandco.com</div>
                       </div>
                     </div>
 
@@ -269,7 +265,8 @@ const Contact = () => {
                       <div>
                         <div className="font-medium mb-1">Business Hours</div>
                         <div className="text-sm text-muted-foreground">
-                          Monday - Friday<br />
+                          Monday - Friday
+                          <br />
                           9:00 AM - 6:00 PM GMT
                         </div>
                       </div>
