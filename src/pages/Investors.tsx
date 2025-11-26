@@ -119,8 +119,8 @@ const Investors = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">Impact-Driven Investment Opportunities</h1>
             <p className="body-lg text-white/90 mb-8">
-              Join our network of sophisticated investors accessing vetted, high-growth SME opportunities with
-              sustainable returns and meaningful impact.
+              Join our network of sophisticated investors accessing vetted, high-growth Small Enterprise opportunities
+              with sustainable returns and meaningful impact.
             </p>
             {/* <Button className="btn-secondary-hero">
               Schedule Investment Discussion
