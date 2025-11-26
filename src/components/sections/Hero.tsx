@@ -124,7 +124,7 @@ const Hero = () => {
                 </h2>
               </div>
               <p className="text-sm md:text-sm lg:text-base mb-4 md:mb-5 lg:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
-                Discover vetted investment opportunities in high-growth Small enterprises with sustainable impact and
+                Discover vetted investment opportunities in high-growth Small Enterprises with sustainable impact and
                 strong returns potential.
               </p>
               <ul className="space-y-1.5 md:space-y-2 mb-6 md:mb-6 lg:mb-8 text-xs md:text-sm lg:text-base text-foreground/80 drop-shadow-sm max-w-md mx-auto">
