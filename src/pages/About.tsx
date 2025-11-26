@@ -8,7 +8,7 @@ const About = () => {
   const [expandedBios, setExpandedBios] = useState<{ [key: number]: boolean }>({});
 
   const toggleBio = (index: number) => {
-    setExpandedBios(prev => ({ ...prev, [index]: !prev[index] }));
+    setExpandedBios((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
   const truncateText = (text: string, maxLength: number = 150) => {
@@ -141,12 +141,12 @@ const About = () => {
               {
                 name: "Jerry Lorseille",
                 role: "Founder and CEO",
-                bio: "Jerry Lorseille is a business strategist with a strong foundation in accounting, financial analysis and entrepreneurial leadership. He excels at identifying opportunities, designing scalable models and shaping the strategic direction of the firm. Jerry brings sharp analytical thinking and practical decision making to JAACK and Co, ensuring bold vision is paired with disciplined execution and sustainable value creation.",
+                bio: "Jerry Lorseille is a business strategist with a strong foundation in accounting, financial analysis and entrepreneurial leadership. He excels at identifying opportunities, designing scalable models and shaping the strategic direction of the firm. Jerry brings sharp analytical thinking and practical decision making to Jaack & co, ensuring bold vision is paired with disciplined execution and sustainable value creation.",
               },
               {
                 name: "Albert Francois",
                 role: "Founder and CFO",
-                bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to JAACK and Co.",
+                bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to Jaack & co.",
               },
               {
                 name: "Alex Jean",
