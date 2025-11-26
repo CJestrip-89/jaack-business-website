@@ -285,10 +285,10 @@ const Contact = () => {
                       <Mail className="w-4 h-4 mr-2" />
                       Send Email
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
+                    {/* <Button variant="outline" className="w-full justify-start">
                       <MapPin className="w-4 h-4 mr-2" />
                       Get Directions
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardContent>
               </Card>
