@@ -12,7 +12,7 @@ const Businesses = () => {
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-primary via-primary/95 to-secondary/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -20,17 +20,15 @@ const Businesses = () => {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-xl text-white mb-6">
-              Accelerate Your Business Growth
-            </h1>
+            <h1 className="heading-xl text-white mb-6">Accelerate Your Business Growth</h1>
             <p className="body-lg text-white/90 mb-8">
-              Partner with JAACK & CO to access strategic funding, growth expertise, 
-              and market expansion opportunities designed for ambitious SMEs.
+              Partner with JAACK & CO to access strategic funding, growth expertise, and market expansion opportunities
+              designed for ambitious SMEs.
             </p>
             {/* <Button className="btn-secondary-hero">
               Schedule a Consultation
-              <ArrowRight className="w-4 h-4 ml-2" /> */}
-            </Button>
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button> */}
           </div>
         </div>
       </section>
@@ -53,8 +51,8 @@ const Businesses = () => {
               </CardHeader>
               <CardContent>
                 <p className="body-md mb-4">
-                  Connect with our network of impact-driven investors and access 
-                  tailored funding solutions for your growth stage.
+                  Connect with our network of impact-driven investors and access tailored funding solutions for your
+                  growth stage.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Seed to Series A funding</li>
@@ -71,8 +69,8 @@ const Businesses = () => {
               </CardHeader>
               <CardContent>
                 <p className="body-md mb-4">
-                  Expert guidance on market positioning, operational excellence, 
-                  and strategic planning for sustainable growth.
+                  Expert guidance on market positioning, operational excellence, and strategic planning for sustainable
+                  growth.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Market analysis & positioning</li>
@@ -89,8 +87,7 @@ const Businesses = () => {
               </CardHeader>
               <CardContent>
                 <p className="body-md mb-4">
-                  Leverage our network and expertise to expand into new markets 
-                  and build strategic partnerships.
+                  Leverage our network and expertise to expand into new markets and build strategic partnerships.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Market entry strategy</li>
