@@ -231,15 +231,15 @@ const Contact = () => {
                     <div className="flex items-start">
                       <MapPin className="w-5 h-5 text-secondary mr-3 mt-1" />
                       <div>
-                        <div className="font-medium mb-1">London Office</div>
+                        <div className="font-medium mb-1">Florida Office</div>
                         <div className="text-sm text-muted-foreground">
-                          25 Bank Street
+                          999 brickell Ave
                           <br />
-                          Canary Wharf
+                          unit 820
                           <br />
-                          London E14 5JP
+                          Miami FL, 33131
                           <br />
-                          United Kingdom
+                          {/* United Kingdom */}
                         </div>
                       </div>
                     </div>
