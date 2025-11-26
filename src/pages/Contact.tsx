@@ -293,7 +293,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="card-professional">
+              {/* <Card className="card-professional">
                 <CardContent className="p-8">
                   <h3 className="font-semibold text-lg mb-4">Response Times</h3>
                   <div className="space-y-3 text-sm">
@@ -311,7 +311,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
