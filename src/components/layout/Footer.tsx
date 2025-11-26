@@ -11,14 +11,11 @@ const Footer = () => {
           {/* Company */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src={jaackLogo} 
-                alt="JAACK & CO Logo" 
-                className="h-16 w-auto opacity-90 filter brightness-110"
-              />
+              <img src={jaackLogo} alt="JAACK & CO Logo" className="h-16 w-auto opacity-90 filter brightness-110" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
-              Connecting ambitious SMEs with impact-driven investors for sustainable growth and meaningful partnerships.
+              Connecting ambitious Small Enterprises with impact-driven investors for sustainable growth and meaningful
+              partnerships.
             </p>
           </div>
 
@@ -26,10 +23,26 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">For Businesses</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><Link to="/services/funding-access" className="hover:text-secondary transition-colors">Funding Access</Link></li>
-              <li><Link to="/services/capital-raising" className="hover:text-secondary transition-colors">Capital Raising</Link></li>
-              <li><Link to="/services/market-expansion" className="hover:text-secondary transition-colors">Market Expansion</Link></li>
-              <li><Link to="/services/partnerships" className="hover:text-secondary transition-colors">Partnerships</Link></li>
+              <li>
+                <Link to="/services/funding-access" className="hover:text-secondary transition-colors">
+                  Funding Access
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/capital-raising" className="hover:text-secondary transition-colors">
+                  Capital Raising
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/market-expansion" className="hover:text-secondary transition-colors">
+                  Market Expansion
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/partnerships" className="hover:text-secondary transition-colors">
+                  Partnerships
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -37,9 +50,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">For Investors</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><Link to="/investors" className="hover:text-secondary transition-colors">Investment Opportunities</Link></li>
-              <li><Link to="/subsidiaries" className="hover:text-secondary transition-colors">Our Portfolio</Link></li>
-              <li><Link to="/insights" className="hover:text-secondary transition-colors">Market Insights</Link></li>
+              <li>
+                <Link to="/investors" className="hover:text-secondary transition-colors">
+                  Investment Opportunities
+                </Link>
+              </li>
+              <li>
+                <Link to="/subsidiaries" className="hover:text-secondary transition-colors">
+                  Our Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/insights" className="hover:text-secondary transition-colors">
+                  Market Insights
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,9 +72,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><Link to="/about" className="hover:text-secondary transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-secondary transition-colors">Contact</Link></li>
-              <li><Link to="/insights" className="hover:text-secondary transition-colors">Insights</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-secondary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-secondary transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/insights" className="hover:text-secondary transition-colors">
+                  Insights
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
