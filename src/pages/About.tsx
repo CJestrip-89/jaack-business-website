@@ -31,8 +31,10 @@ const About = () => {
             <div>
               <h2 className="heading-lg mb-6">Our Mission</h2>
               <p className="body-md mb-6">
-                To democratize access to growth capital for ambitious SMEs while providing sophisticated investors with
-                curated opportunities that deliver both financial returns and meaningful impact.
+                Our mission is to empower entrepreneurs by giving them access to capital, resources, and long lasting
+                business relationships. We aim to create opportunities that help small businesses grow while ensuring
+                investors feel secure and rewarded. Every decision is guided by responsibility, integrity, and a
+                commitment to building partnerships that last.
               </p>
               <p className="body-md text-muted-foreground">
                 We believe that with the right partnerships, every business has the potential to create lasting value
