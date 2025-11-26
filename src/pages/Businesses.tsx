@@ -22,8 +22,8 @@ const Businesses = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">Accelerate Your Business Growth</h1>
             <p className="body-lg text-white/90 mb-8">
-              Partner with JAACK & CO to access strategic funding, growth expertise, and market expansion opportunities
-              designed for ambitious SMEs.
+              Partner with Jaack & co to access strategic funding, growth expertise, and market expansion opportunities
+              designed for ambitious Small Enterprises.
             </p>
             {/* <Button className="btn-secondary-hero">
               Schedule a Consultation
