@@ -7,17 +7,18 @@ const About = () => {
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-xl text-white mb-6">
-              About JAACK & CO
-            </h1>
+            <h1 className="heading-xl text-white mb-6">About Jaack & co</h1>
             <p className="body-lg text-white/90">
-              We bridge the gap between ambitious SMEs and impact-driven investors, 
-              creating sustainable partnerships that drive meaningful business transformation.
+              We are a private funding and business support company that helps small businesses secure capital and
+              expand their market reach. We operate as both a financial resource and a strategic growth partner. Our
+              focus is to bridge the gap between entrepreneurs who need funding and investors seeking meaningful
+              opportunities. We help clients access non traditional financing, build partnerships, and grow their
+              businesses with long term stability.
             </p>
           </div>
         </div>
@@ -30,24 +31,23 @@ const About = () => {
             <div>
               <h2 className="heading-lg mb-6">Our Mission</h2>
               <p className="body-md mb-6">
-                To democratize access to growth capital for ambitious SMEs while providing 
-                sophisticated investors with curated opportunities that deliver both financial 
-                returns and meaningful impact.
+                To democratize access to growth capital for ambitious SMEs while providing sophisticated investors with
+                curated opportunities that deliver both financial returns and meaningful impact.
               </p>
               <p className="body-md text-muted-foreground">
-                We believe that with the right partnerships, every business has the potential 
-                to create lasting value for all stakeholders.
+                We believe that with the right partnerships, every business has the potential to create lasting value
+                for all stakeholders.
               </p>
             </div>
             <div>
               <h2 className="heading-lg mb-6">Our Vision</h2>
               <p className="body-md mb-6">
-                To become the leading platform connecting growth-stage SMEs with impact-focused 
-                investors across Europe, fostering a new generation of sustainable business partnerships.
+                To become the leading platform connecting growth-stage SMEs with impact-focused investors across Europe,
+                fostering a new generation of sustainable business partnerships.
               </p>
               <p className="body-md text-muted-foreground">
-                We envision a future where access to capital is matched with strategic expertise 
-                to accelerate responsible business growth.
+                We envision a future where access to capital is matched with strategic expertise to accelerate
+                responsible business growth.
               </p>
             </div>
           </div>
@@ -59,9 +59,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Our Core Values</h2>
-            <p className="body-lg max-w-3xl mx-auto">
-              The principles that guide everything we do
-            </p>
+            <p className="body-lg max-w-3xl mx-auto">The principles that guide everything we do</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -123,23 +121,28 @@ const About = () => {
               {
                 name: "James Anderson",
                 role: "Founder & Managing Partner",
-                bio: "15+ years in private equity and venture capital with a focus on European SME growth investments."
+                bio: "15+ years in private equity and venture capital with a focus on European SME growth investments.",
               },
               {
                 name: "Anna Chen",
                 role: "Investment Director",
-                bio: "Former investment banking analyst with expertise in due diligence and financial structuring."
+                bio: "Former investment banking analyst with expertise in due diligence and financial structuring.",
               },
               {
-                name: "Carlos Rodriguez", 
+                name: "Carlos Rodriguez",
                 role: "Head of Business Development",
-                bio: "Serial entrepreneur and business advisor with deep networks in the European startup ecosystem."
-              }
+                bio: "Serial entrepreneur and business advisor with deep networks in the European startup ecosystem.",
+              },
             ].map((member, index) => (
               <Card key={index} className="card-professional text-center">
                 <CardContent className="p-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                    <span className="text-white font-bold text-2xl">
+                      {member.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{member.name}</h3>
                   <p className="text-secondary font-medium mb-4">{member.role}</p>
