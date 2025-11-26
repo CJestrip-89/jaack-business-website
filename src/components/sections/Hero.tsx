@@ -23,8 +23,8 @@ const Hero = () => {
             <span className="text-gradient-accent"> Funding and Growth Support</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 md:mb-7 lg:mb-8 animate-slide-up px-2">
-            JAACK & CO powers partnerships between ambitious SMEs and impact-focused investors — combining capital,
-            strategy, and long-term growth into one platform.
+            JAACK & CO connects entrepreneurs with private capital and provides strategic business development that
+            helps companies grow with confidence.
           </p>
         </div>
 
