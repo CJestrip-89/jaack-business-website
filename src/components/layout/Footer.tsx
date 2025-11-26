@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           {/* For Businesses */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">For Businesses</h3>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
@@ -44,10 +44,10 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* For Investors */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">For Investors</h3>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
@@ -55,7 +55,7 @@ const Footer = () => {
                   Investment Opportunities
                 </Link>
               </li>
-              {/* <li>
+               <li>
                 <Link to="/subsidiaries" className="hover:text-secondary transition-colors">
                   Our Portfolio
                 </Link>
@@ -64,9 +64,9 @@ const Footer = () => {
                 <Link to="/insights" className="hover:text-secondary transition-colors">
                   Market Insights
                 </Link>
-              </li> */}
+              </li> 
             </ul>
-          </div>
+          </div> */}
 
           {/* Company */}
           <div>
