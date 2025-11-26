@@ -8,14 +8,12 @@ const Services = () => {
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-xl text-white mb-6">
-              Comprehensive Business & Investment Services
-            </h1>
+            <h1 className="heading-xl text-white mb-6">Comprehensive Business & Investment Services</h1>
             <p className="body-lg text-white/90">
               Five core pillars designed to accelerate SME growth and maximize investor returns
             </p>
@@ -32,7 +30,7 @@ const Services = () => {
               { icon: DollarSign, title: "Capital Raising", count: "02" },
               { icon: Users, title: "Investor Matching", count: "03" },
               { icon: Globe, title: "Business Growth", count: "04" },
-              { icon: Handshake, title: "Partnership Development", count: "05" }
+              { icon: Handshake, title: "Partnership Development", count: "05" },
             ].map((service, index) => (
               <Card key={index} className="card-professional text-center group cursor-pointer">
                 <CardContent className="p-8">
@@ -55,7 +53,9 @@ const Services = () => {
                   <h2 className="heading-md">Alternative and Private Funding</h2>
                 </div>
                 <p className="body-md mb-6">
-                  We help small businesses access non traditional financing by connecting them with private investors and alternative funding channels. We structure deals that support expansion, operations, and project development.
+                  We help small businesses access non traditional financing by connecting them with private investors
+                  and alternative funding channels. We structure deals that support expansion, operations, and project
+                  development.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -71,9 +71,9 @@ const Services = () => {
                     <span>Deal structuring and support</span>
                   </li>
                 </ul>
-                <Button className="btn-hero">
+                {/* <Button className="btn-hero">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </Button> */}
               </div>
               <Card className="card-professional">
                 <CardContent className="p-8">
@@ -103,19 +103,27 @@ const Services = () => {
                   <h4 className="font-semibold mb-4">Capital Deployment Process</h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        1
+                      </div>
                       <span>Raise capital from network</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        2
+                      </div>
                       <span>Vet business opportunities</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        3
+                      </div>
                       <span>Deploy funds responsibly</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        4
+                      </div>
                       <span>Monitor sustainable growth</span>
                     </div>
                   </div>
@@ -128,7 +136,8 @@ const Services = () => {
                   <h2 className="heading-md">Capital Raising and Deployment</h2>
                 </div>
                 <p className="body-md mb-6">
-                  We raise capital from our client and investor network and deploy those funds into vetted business opportunities. Our team ensures that capital is placed responsibly for sustainable growth.
+                  We raise capital from our client and investor network and deploy those funds into vetted business
+                  opportunities. Our team ensures that capital is placed responsibly for sustainable growth.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -144,9 +153,9 @@ const Services = () => {
                     <span>Responsible fund deployment</span>
                   </li>
                 </ul>
-                <Button className="btn-accent">
+                {/* <Button className="btn-accent">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </Button> */}
               </div>
             </div>
 
@@ -159,7 +168,8 @@ const Services = () => {
                   <h2 className="heading-md">Investor and Entrepreneur Matching</h2>
                 </div>
                 <p className="body-md mb-6">
-                  We act as a bridge between businesses and investors. We assist with interest alignment, preparation, and due diligence so both sides feel secure and confident.
+                  We act as a bridge between businesses and investors. We assist with interest alignment, preparation,
+                  and due diligence so both sides feel secure and confident.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -175,9 +185,9 @@ const Services = () => {
                     <span>Comprehensive due diligence</span>
                   </li>
                 </ul>
-                <Button className="btn-hero">
+                {/* <Button className="btn-hero">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </Button> */}
               </div>
               <Card className="card-professional">
                 <CardContent className="p-8">
@@ -207,19 +217,27 @@ const Services = () => {
                   <h4 className="font-semibold mb-4">Growth Strategies</h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        1
+                      </div>
                       <span>Client acquisition strategies</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        2
+                      </div>
                       <span>Market expansion planning</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        3
+                      </div>
                       <span>Visibility enhancement</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                        4
+                      </div>
                       <span>Long-term stability focus</span>
                     </div>
                   </div>
@@ -232,7 +250,8 @@ const Services = () => {
                   <h2 className="heading-md">Business Growth and Market Expansion</h2>
                 </div>
                 <p className="body-md mb-6">
-                  We support businesses by helping them reach new clients and scale operations. Our strategies focus on increasing visibility, expanding markets, and achieving long term stability.
+                  We support businesses by helping them reach new clients and scale operations. Our strategies focus on
+                  increasing visibility, expanding markets, and achieving long term stability.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -248,9 +267,9 @@ const Services = () => {
                     <span>Market visibility strategies</span>
                   </li>
                 </ul>
-                <Button className="btn-accent">
+                {/* <Button className="btn-accent">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </Button> */}
               </div>
             </div>
 
@@ -263,7 +282,8 @@ const Services = () => {
                   <h2 className="heading-md">Partnership Development</h2>
                 </div>
                 <p className="body-md mb-6">
-                  We help build strong long term relationships between investors, entrepreneurs, and partners. These relationships become the foundation for ongoing collaboration and growth.
+                  We help build strong long term relationships between investors, entrepreneurs, and partners. These
+                  relationships become the foundation for ongoing collaboration and growth.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
@@ -279,9 +299,9 @@ const Services = () => {
                     <span>Foundation for ongoing growth</span>
                   </li>
                 </ul>
-                <Button className="btn-hero">
+                {/* <Button className="btn-hero">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </Button> */}
               </div>
               <Card className="card-professional">
                 <CardContent className="p-8">
