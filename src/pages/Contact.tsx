@@ -231,15 +231,13 @@ const Contact = () => {
                     <div className="flex items-start">
                       <MapPin className="w-5 h-5 text-secondary mr-3 mt-1" />
                       <div>
-                        <div className="font-medium mb-1">Florida Office</div>
+                        <div className="font-medium mb-1">Miami Office</div>
                         <div className="text-sm text-muted-foreground">
-                          999 brickell Ave
-                          <br />
-                          unit 820
+                          999 Brickell Ave
                           <br />
                           Miami FL, 33131
                           <br />
-                          {/* United Kingdom */}
+                          USA
                         </div>
                       </div>
                     </div>
