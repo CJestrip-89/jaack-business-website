@@ -27,9 +27,9 @@ const Businesses = () => {
               Partner with JAACK & CO to access strategic funding, growth expertise, 
               and market expansion opportunities designed for ambitious SMEs.
             </p>
-            <Button className="btn-secondary-hero">
+            {/* <Button className="btn-secondary-hero">
               Schedule a Consultation
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2" /> */}
             </Button>
           </div>
         </div>
