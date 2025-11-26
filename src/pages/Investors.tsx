@@ -225,7 +225,7 @@ const Investors = () => {
       </section>
 
       {/* Investment Focus */}
-      <section className="py-20 bg-muted">
+      {/* <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -250,7 +250,7 @@ const Investors = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Investor Application */}
       <section className="py-20 bg-background">
