@@ -192,8 +192,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 md:mb-1">50+</div>
-                <div className="text-xs md:text-sm lg:text-base">SMEs Funded</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-0.5 md:mb-1">10+</div>
+                <div className="text-xs md:text-sm lg:text-base">Small Businesses Funded</div>
               </motion.div>
               <div className="w-px h-12 md:h-14 lg:h-16 bg-white/20" />
               <motion.div
