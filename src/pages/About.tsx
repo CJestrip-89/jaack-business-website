@@ -36,10 +36,10 @@ const About = () => {
                 investors feel secure and rewarded. Every decision is guided by responsibility, integrity, and a
                 commitment to building partnerships that last.
               </p>
-              <p className="body-md text-muted-foreground">
+              {/* <p className="body-md text-muted-foreground">
                 We believe that with the right partnerships, every business has the potential to create lasting value
                 for all stakeholders.
-              </p>
+              </p> */}
             </div>
             <div>
               <h2 className="heading-lg mb-6">Our Vision</h2>
