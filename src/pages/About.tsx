@@ -1,7 +1,7 @@
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Target, Award, TrendingUp } from "lucide-react";
+import { Users, Handshake, Award, TrendingUp } from "lucide-react";
 
 const About = () => {
   return (
@@ -70,30 +70,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="card-professional text-center">
               <CardContent className="p-8">
-                <Target className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Impact First</h3>
-                <p className="text-muted-foreground">
-                  We prioritize sustainable growth and meaningful impact in every partnership we facilitate.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-professional text-center">
-              <CardContent className="p-8">
                 <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Trust & Transparency</h3>
+                <h3 className="font-semibold text-lg mb-3">Trust and Transparency</h3>
                 <p className="text-muted-foreground">
-                  Building lasting relationships through honest communication and transparent processes.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-professional text-center">
-              <CardContent className="p-8">
-                <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Excellence</h3>
-                <p className="text-muted-foreground">
-                  Delivering exceptional service and maintaining the highest standards of professionalism.
+                  We prioritize clear and honest communication with clients and investors. Every step is taken with accountability and openness.
                 </p>
               </CardContent>
             </Card>
@@ -101,9 +81,29 @@ const About = () => {
             <Card className="card-professional text-center">
               <CardContent className="p-8">
                 <TrendingUp className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="font-semibold text-lg mb-3">Growth Mindset</h3>
+                <h3 className="font-semibold text-lg mb-3">Empowerment and Growth</h3>
                 <p className="text-muted-foreground">
-                  Continuously learning and adapting to better serve our community of businesses and investors.
+                  We believe in empowering small businesses with the resources they need to grow while creating sustainable investment opportunities.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-professional text-center">
+              <CardContent className="p-8">
+                <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h3 className="font-semibold text-lg mb-3">Responsibility and Integrity</h3>
+                <p className="text-muted-foreground">
+                  We manage client funds with the highest level of care. Ethical practices and responsible financial decision making guide all our actions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-professional text-center">
+              <CardContent className="p-8">
+                <Handshake className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h3 className="font-semibold text-lg mb-3">Long Term Relationships</h3>
+                <p className="text-muted-foreground">
+                  We focus on building lasting partnerships that create long term success for everyone involved.
                 </p>
               </CardContent>
             </Card>
