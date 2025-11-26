@@ -74,7 +74,7 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">Let's Build Something Together</h1>
             <p className="body-lg text-white/90">
-              Whether you need funding, investors, or business support, JAACK & CO is ready to help you grow. Reach out
+              Whether you need funding, investors, or business support, Jaack & co is ready to help you grow. Reach out
               and our team will get back to you soon.
             </p>
           </div>
