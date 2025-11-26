@@ -1,9 +1,21 @@
+import { useState } from "react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Handshake, Award, TrendingUp } from "lucide-react";
 
 const About = () => {
+  const [expandedBios, setExpandedBios] = useState<{ [key: number]: boolean }>({});
+
+  const toggleBio = (index: number) => {
+    setExpandedBios(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  const truncateText = (text: string, maxLength: number = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + "...";
+  };
+
   return (
     <>
       <Navigation />
@@ -152,9 +164,17 @@ const About = () => {
                         .join("")}
                     </span>
                   </div>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {expandedBios[index] ? member.bio : truncateText(member.bio)}
+                  </p>
+                  <button
+                    onClick={() => toggleBio(index)}
+                    className="text-secondary hover:text-secondary/80 font-medium text-sm mb-4 transition-colors"
+                  >
+                    {expandedBios[index] ? "Read less" : "Read more"}
+                  </button>
                   <h3 className="font-semibold text-lg mb-2">{member.name}</h3>
-                  <p className="text-secondary font-medium mb-4">{member.role}</p>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
+                  <p className="text-muted-foreground font-medium text-sm">{member.role}</p>
                 </CardContent>
               </Card>
             ))}
