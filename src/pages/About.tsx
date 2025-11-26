@@ -44,13 +44,15 @@ const About = () => {
             <div>
               <h2 className="heading-lg mb-6">Our Vision</h2>
               <p className="body-md mb-6">
-                To become the leading platform connecting growth-stage SMEs with impact-focused investors across Europe,
-                fostering a new generation of sustainable business partnerships.
+                Our mission is to empower entrepreneurs by giving them access to capital, resources, and long lasting
+                business relationships. We aim to create opportunities that help small businesses grow while ensuring
+                investors feel secure and rewarded. Every decision is guided by responsibility, integrity, and a
+                commitment to building partnerships that last.
               </p>
-              <p className="body-md text-muted-foreground">
+              {/* <p className="body-md text-muted-foreground">
                 We envision a future where access to capital is matched with strategic expertise to accelerate
                 responsible business growth.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
