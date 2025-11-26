@@ -44,10 +44,11 @@ const About = () => {
             <div>
               <h2 className="heading-lg mb-6">Our Vision</h2>
               <p className="body-md mb-6">
-                Our mission is to empower entrepreneurs by giving them access to capital, resources, and long lasting
-                business relationships. We aim to create opportunities that help small businesses grow while ensuring
-                investors feel secure and rewarded. Every decision is guided by responsibility, integrity, and a
-                commitment to building partnerships that last.
+                Our vision is to become a trusted partner for entrepreneurs and investors by building a portfolio of
+                high-performing businesses with strong fundamentals, real-world utility, and sustainable growth
+                potential. We aim to create environments where smart capital meets disciplined execution, where
+                businesses thrive through strategic support, and where every partnership is grounded in clarity,
+                accountability, and long-term value creation.
               </p>
               {/* <p className="body-md text-muted-foreground">
                 We envision a future where access to capital is matched with strategic expertise to accelerate
