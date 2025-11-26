@@ -19,8 +19,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pt-20 md:pt-28 lg:pt-24 pb-8 md:pb-10 lg:pb-12">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-5 lg:mb-6 animate-fade-in leading-tight">
-            Bridging Ambition with
-            <span className="text-gradient-accent"> Opportunity</span>
+            Empowering Small Businesses Through
+            <span className="text-gradient-accent"> Funding and Growth Support</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 md:mb-7 lg:mb-8 animate-slide-up px-2">
             JAACK & CO powers partnerships between ambitious SMEs and impact-focused investors — combining capital,
@@ -45,7 +45,9 @@ const Hero = () => {
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <TrendingUp className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-secondary mr-2 md:mr-2.5 lg:mr-3 drop-shadow-lg" />
                 </motion.div>
-                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">For Businesses</h2>
+                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">
+                  For Businesses
+                </h2>
               </div>
               <p className="text-sm md:text-sm lg:text-base mb-4 md:mb-5 lg:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
                 Access funding, strategic growth partnerships, and market expansion opportunities tailored to your
@@ -117,7 +119,9 @@ const Hero = () => {
                 <motion.div whileHover={{ scale: 1.1, rotate: -5 }} transition={{ type: "spring", stiffness: 300 }}>
                   <Users className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-accent mr-2 md:mr-2.5 lg:mr-3 drop-shadow-lg" />
                 </motion.div>
-                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">For Investors</h2>
+                <h2 className="text-xl md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground drop-shadow-md">
+                  For Investors
+                </h2>
               </div>
               <p className="text-sm md:text-sm lg:text-base mb-4 md:mb-5 lg:mb-6 text-foreground/90 drop-shadow-sm max-w-md mx-auto px-2">
                 Discover vetted investment opportunities in high-growth SMEs with sustainable impact and strong returns
@@ -173,10 +177,15 @@ const Hero = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="text-center mt-8 md:mt-12 lg:mt-16 animate-fade-in max-w-4xl mx-auto px-2" style={{ animationDelay: "0.4s" }}>
+        <div
+          className="text-center mt-8 md:mt-12 lg:mt-16 animate-fade-in max-w-4xl mx-auto px-2"
+          style={{ animationDelay: "0.4s" }}
+        >
           <div className="card-professional p-4 md:p-6 lg:p-8 backdrop-blur-md bg-white/5 border-white/10">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-1 md:mb-2">Backed by Results</h2>
-            <p className="text-sm md:text-base text-white/80 mb-6 md:mb-7 lg:mb-8">Trusted by ambitious businesses and impact-focused investors</p>
+            <p className="text-sm md:text-base text-white/80 mb-6 md:mb-7 lg:mb-8">
+              Trusted by ambitious businesses and impact-focused investors
+            </p>
             <div className="flex justify-center items-center space-x-6 md:space-x-10 lg:space-x-12 text-white/70">
               <motion.div
                 className="text-center"
