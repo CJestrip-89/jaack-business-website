@@ -73,7 +73,8 @@ const About = () => {
                 <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-semibold text-lg mb-3">Trust and Transparency</h3>
                 <p className="text-muted-foreground">
-                  We prioritize clear and honest communication with clients and investors. Every step is taken with accountability and openness.
+                  We prioritize clear and honest communication with clients and investors. Every step is taken with
+                  accountability and openness.
                 </p>
               </CardContent>
             </Card>
@@ -83,7 +84,8 @@ const About = () => {
                 <TrendingUp className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-semibold text-lg mb-3">Empowerment and Growth</h3>
                 <p className="text-muted-foreground">
-                  We believe in empowering small businesses with the resources they need to grow while creating sustainable investment opportunities.
+                  We believe in empowering small businesses with the resources they need to grow while creating
+                  sustainable investment opportunities.
                 </p>
               </CardContent>
             </Card>
@@ -93,7 +95,8 @@ const About = () => {
                 <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-semibold text-lg mb-3">Responsibility and Integrity</h3>
                 <p className="text-muted-foreground">
-                  We manage client funds with the highest level of care. Ethical practices and responsible financial decision making guide all our actions.
+                  We manage client funds with the highest level of care. Ethical practices and responsible financial
+                  decision making guide all our actions.
                 </p>
               </CardContent>
             </Card>
@@ -124,19 +127,19 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "James Anderson",
-                role: "Founder & Managing Partner",
-                bio: "15+ years in private equity and venture capital with a focus on European SME growth investments.",
+                name: "Jerry Lorseille",
+                role: "Founder and CEO",
+                bio: "Jerry Lorseille is a business strategist with a strong foundation in accounting, financial analysis and entrepreneurial leadership. He excels at identifying opportunities, designing scalable models and shaping the strategic direction of the firm. Jerry brings sharp analytical thinking and practical decision making to JAACK and Co, ensuring bold vision is paired with disciplined execution and sustainable value creation.",
               },
               {
-                name: "Anna Chen",
-                role: "Investment Director",
-                bio: "Former investment banking analyst with expertise in due diligence and financial structuring.",
+                name: "Albert Francois",
+                role: "Founder and CFO",
+                bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to JAACK and Co.",
               },
               {
-                name: "Carlos Rodriguez",
-                role: "Head of Business Development",
-                bio: "Serial entrepreneur and business advisor with deep networks in the European startup ecosystem.",
+                name: "Alex Jean",
+                role: "Founder and COO",
+                bio: "Alex Jean is an operations and engineering specialist who transforms strategy into seamless execution. With a technical background and strong operational mindset, he builds efficient systems, optimizes processes and ensures reliable performance across every venture. Alex is the force that grounds vision into practical action, connecting engineering precision with real world operations.",
               },
             ].map((member, index) => (
               <Card key={index} className="card-professional text-center">
