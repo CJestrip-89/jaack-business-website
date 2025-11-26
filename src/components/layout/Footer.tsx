@@ -24,7 +24,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">For Businesses</h3>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
-                <Link to="/services" className="hover:text-secondary transition-colors">
+                <Link to="/businesses" className="hover:text-secondary transition-colors">
                   Funding Access
                 </Link>
               </li>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-secondary transition-colors">
+                <Link to="/businesses" className="hover:text-secondary transition-colors">
                   Market Expansion
                 </Link>
               </li>
