@@ -134,7 +134,7 @@ const Investors = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">Why Invest with JAACK & CO</h2>
+            <h2 className="heading-lg mb-4">Why Invest with Jaack & co</h2>
             <p className="body-lg max-w-3xl mx-auto">
               Professional due diligence, curated opportunities, and ongoing portfolio support
             </p>
