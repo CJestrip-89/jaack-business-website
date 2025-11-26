@@ -242,13 +242,13 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-start">
+                    {/* <div className="flex items-start">
                       <Phone className="w-5 h-5 text-secondary mr-3 mt-1" />
                       <div>
                         <div className="font-medium mb-1">Phone</div>
                         <div className="text-sm text-muted-foreground">+44 20 7946 0958</div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="flex items-start">
                       <Mail className="w-5 h-5 text-secondary mr-3 mt-1" />
@@ -265,7 +265,7 @@ const Contact = () => {
                         <div className="text-sm text-muted-foreground">
                           Monday - Friday
                           <br />
-                          9:00 AM - 6:00 PM GMT
+                          8:00 AM - 5:00 PM ETC
                         </div>
                       </div>
                     </div>
