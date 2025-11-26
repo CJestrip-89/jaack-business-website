@@ -2,7 +2,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, DollarSign, Globe, Handshake, ArrowRight, CheckCircle } from "lucide-react";
+import { TrendingUp, DollarSign, Globe, Handshake, ArrowRight, CheckCircle, Users } from "lucide-react";
 
 const Services = () => {
   return (
@@ -17,7 +17,7 @@ const Services = () => {
               Comprehensive Business & Investment Services
             </h1>
             <p className="body-lg text-white/90">
-              Four core pillars designed to accelerate SME growth and maximize investor returns
+              Five core pillars designed to accelerate SME growth and maximize investor returns
             </p>
           </div>
         </div>
@@ -26,12 +26,13 @@ const Services = () => {
       {/* Services Overview */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-20">
             {[
-              { icon: TrendingUp, title: "Funding Access", count: "01" },
+              { icon: TrendingUp, title: "Alternative & Private Funding", count: "01" },
               { icon: DollarSign, title: "Capital Raising", count: "02" },
-              { icon: Globe, title: "Market Expansion", count: "03" },
-              { icon: Handshake, title: "Strategic Partnerships", count: "04" }
+              { icon: Users, title: "Investor Matching", count: "03" },
+              { icon: Globe, title: "Business Growth", count: "04" },
+              { icon: Handshake, title: "Partnership Development", count: "05" }
             ].map((service, index) => (
               <Card key={index} className="card-professional text-center group cursor-pointer">
                 <CardContent className="p-8">
@@ -45,30 +46,29 @@ const Services = () => {
 
           {/* Detailed Services */}
           <div className="space-y-20">
-            {/* Funding Access */}
+            {/* Alternative and Private Funding */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-4">
                   <TrendingUp className="w-8 h-8 text-secondary mr-3" />
                   <span className="text-4xl font-bold text-muted mr-4">01</span>
-                  <h2 className="heading-md">Funding Access</h2>
+                  <h2 className="heading-md">Alternative and Private Funding</h2>
                 </div>
                 <p className="body-md mb-6">
-                  Connect SMEs with our curated network of impact-driven investors through 
-                  comprehensive matching and introduction services.
+                  We help small businesses access non traditional financing by connecting them with private investors and alternative funding channels. We structure deals that support expansion, operations, and project development.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Investor network access</span>
+                    <span>Private investor connections</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Deal flow optimization</span>
+                    <span>Alternative funding channels</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Funding strategy development</span>
+                    <span>Deal structuring and support</span>
                   </li>
                 </ul>
                 <Button className="btn-hero">
@@ -77,46 +77,46 @@ const Services = () => {
               </div>
               <Card className="card-professional">
                 <CardContent className="p-8">
-                  <h4 className="font-semibold mb-4">Funding Types Available</h4>
+                  <h4 className="font-semibold mb-4">Funding Applications</h4>
                   <div className="space-y-4">
                     <div className="border-l-4 border-secondary pl-4">
-                      <h5 className="font-medium">Seed Funding</h5>
-                      <p className="text-sm text-muted-foreground">€50K - €500K for early-stage validation</p>
+                      <h5 className="font-medium">Business Expansion</h5>
+                      <p className="text-sm text-muted-foreground">Capital for scaling operations and growth</p>
                     </div>
                     <div className="border-l-4 border-secondary pl-4">
-                      <h5 className="font-medium">Series A</h5>
-                      <p className="text-sm text-muted-foreground">€500K - €5M for growth acceleration</p>
+                      <h5 className="font-medium">Operational Support</h5>
+                      <p className="text-sm text-muted-foreground">Funding for day-to-day business needs</p>
                     </div>
                     <div className="border-l-4 border-secondary pl-4">
-                      <h5 className="font-medium">Revenue-Based</h5>
-                      <p className="text-sm text-muted-foreground">Flexible financing based on revenue</p>
+                      <h5 className="font-medium">Project Development</h5>
+                      <p className="text-sm text-muted-foreground">Financing for specific initiatives</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Capital Raising */}
+            {/* Capital Raising and Deployment */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <Card className="card-professional order-2 md:order-1">
                 <CardContent className="p-8">
-                  <h4 className="font-semibold mb-4">Capital Raising Process</h4>
+                  <h4 className="font-semibold mb-4">Capital Deployment Process</h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
-                      <span>Business assessment & valuation</span>
+                      <span>Raise capital from network</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
-                      <span>Investor pitch preparation</span>
+                      <span>Vet business opportunities</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
-                      <span>Due diligence support</span>
+                      <span>Deploy funds responsibly</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
-                      <span>Term sheet negotiation</span>
+                      <span>Monitor sustainable growth</span>
                     </div>
                   </div>
                 </CardContent>
@@ -125,24 +125,23 @@ const Services = () => {
                 <div className="flex items-center mb-4">
                   <DollarSign className="w-8 h-8 text-accent mr-3" />
                   <span className="text-4xl font-bold text-muted mr-4">02</span>
-                  <h2 className="heading-md">Capital Raising</h2>
+                  <h2 className="heading-md">Capital Raising and Deployment</h2>
                 </div>
                 <p className="body-md mb-6">
-                  End-to-end capital raising support from initial planning through to 
-                  successful fund closure and ongoing investor relations.
+                  We raise capital from our client and investor network and deploy those funds into vetted business opportunities. Our team ensures that capital is placed responsibly for sustainable growth.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Pitch deck development</span>
+                    <span>Network capital raising</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Financial modeling</span>
+                    <span>Business opportunity vetting</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Legal documentation support</span>
+                    <span>Responsible fund deployment</span>
                   </li>
                 </ul>
                 <Button className="btn-accent">
@@ -151,30 +150,29 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Market Expansion */}
+            {/* Investor and Entrepreneur Matching */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-4">
-                  <Globe className="w-8 h-8 text-secondary mr-3" />
+                  <Users className="w-8 h-8 text-secondary mr-3" />
                   <span className="text-4xl font-bold text-muted mr-4">03</span>
-                  <h2 className="heading-md">Market Expansion</h2>
+                  <h2 className="heading-md">Investor and Entrepreneur Matching</h2>
                 </div>
                 <p className="body-md mb-6">
-                  Strategic guidance and practical support for businesses looking to expand 
-                  into new markets, sectors, or geographical regions.
+                  We act as a bridge between businesses and investors. We assist with interest alignment, preparation, and due diligence so both sides feel secure and confident.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Market research & analysis</span>
+                    <span>Interest alignment services</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Go-to-market strategy</span>
+                    <span>Preparation and readiness</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Local partnership facilitation</span>
+                    <span>Comprehensive due diligence</span>
                   </li>
                 </ul>
                 <Button className="btn-hero">
@@ -183,76 +181,127 @@ const Services = () => {
               </div>
               <Card className="card-professional">
                 <CardContent className="p-8">
-                  <h4 className="font-semibold mb-4">Expansion Opportunities</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      "UK Market",
-                      "European Union", 
-                      "North America",
-                      "Asia Pacific",
-                      "Digital Channels",
-                      "B2B Sales",
-                      "Retail Partnerships",
-                      "E-commerce"
-                    ].map((market, index) => (
-                      <div key={index} className="bg-muted rounded-lg p-3 text-center text-sm font-medium">
-                        {market}
-                      </div>
-                    ))}
+                  <h4 className="font-semibold mb-4">Matching Benefits</h4>
+                  <div className="space-y-4">
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Aligned Interests</h5>
+                      <p className="text-sm text-muted-foreground">Ensure both parties share common goals</p>
+                    </div>
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Enhanced Security</h5>
+                      <p className="text-sm text-muted-foreground">Thorough vetting creates confidence</p>
+                    </div>
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Strategic Fit</h5>
+                      <p className="text-sm text-muted-foreground">Perfect matches for long-term success</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Strategic Partnerships */}
+            {/* Business Growth and Market Expansion */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <Card className="card-professional order-2 md:order-1">
                 <CardContent className="p-8">
-                  <h4 className="font-semibold mb-4">Partnership Types</h4>
+                  <h4 className="font-semibold mb-4">Growth Strategies</h4>
                   <div className="space-y-4">
-                    <div className="border-l-4 border-accent pl-4">
-                      <h5 className="font-medium">Strategic Alliances</h5>
-                      <p className="text-sm text-muted-foreground">Long-term partnerships for mutual growth</p>
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
+                      <span>Client acquisition strategies</span>
                     </div>
-                    <div className="border-l-4 border-accent pl-4">
-                      <h5 className="font-medium">Joint Ventures</h5>
-                      <p className="text-sm text-muted-foreground">Collaborative business ventures</p>
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
+                      <span>Market expansion planning</span>
                     </div>
-                    <div className="border-l-4 border-accent pl-4">
-                      <h5 className="font-medium">Distribution Partners</h5>
-                      <p className="text-sm text-muted-foreground">Channel expansion opportunities</p>
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
+                      <span>Visibility enhancement</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</div>
+                      <span>Long-term stability focus</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
               <div className="order-1 md:order-2">
                 <div className="flex items-center mb-4">
-                  <Handshake className="w-8 h-8 text-accent mr-3" />
+                  <Globe className="w-8 h-8 text-accent mr-3" />
                   <span className="text-4xl font-bold text-muted mr-4">04</span>
-                  <h2 className="heading-md">Strategic Partnerships</h2>
+                  <h2 className="heading-md">Business Growth and Market Expansion</h2>
                 </div>
                 <p className="body-md mb-6">
-                  Facilitate meaningful business partnerships that create synergies, 
-                  reduce risks, and accelerate growth for all parties involved.
+                  We support businesses by helping them reach new clients and scale operations. Our strategies focus on increasing visibility, expanding markets, and achieving long term stability.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Partnership opportunity identification</span>
+                    <span>Client reach expansion</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Negotiation support</span>
+                    <span>Operations scaling</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-success mr-3" />
-                    <span>Ongoing relationship management</span>
+                    <span>Market visibility strategies</span>
                   </li>
                 </ul>
                 <Button className="btn-accent">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
+            </div>
+
+            {/* Partnership Development */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center mb-4">
+                  <Handshake className="w-8 h-8 text-secondary mr-3" />
+                  <span className="text-4xl font-bold text-muted mr-4">05</span>
+                  <h2 className="heading-md">Partnership Development</h2>
+                </div>
+                <p className="body-md mb-6">
+                  We help build strong long term relationships between investors, entrepreneurs, and partners. These relationships become the foundation for ongoing collaboration and growth.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-success mr-3" />
+                    <span>Long-term relationship building</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-success mr-3" />
+                    <span>Multi-party collaboration facilitation</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-success mr-3" />
+                    <span>Foundation for ongoing growth</span>
+                  </li>
+                </ul>
+                <Button className="btn-hero">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+              <Card className="card-professional">
+                <CardContent className="p-8">
+                  <h4 className="font-semibold mb-4">Partnership Benefits</h4>
+                  <div className="space-y-4">
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Strong Relationships</h5>
+                      <p className="text-sm text-muted-foreground">Build trust and lasting connections</p>
+                    </div>
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Collaborative Growth</h5>
+                      <p className="text-sm text-muted-foreground">Mutual success through cooperation</p>
+                    </div>
+                    <div className="border-l-4 border-secondary pl-4">
+                      <h5 className="font-medium">Sustainable Network</h5>
+                      <p className="text-sm text-muted-foreground">Ecosystem for continuous opportunity</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
