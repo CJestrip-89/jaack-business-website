@@ -154,30 +154,39 @@ const About = () => {
                 photo: undefined,
               },
             ].map((member, index) => (
-              <Card key={index} className="card-professional text-center">
-                <CardContent className="p-8">
-                  <Avatar className="w-24 h-24 mx-auto mb-4">
+              <Card key={index} className="card-professional overflow-hidden">
+                <CardContent className="p-0">
+                  {/* Photo Section */}
+                  <div className="relative w-full aspect-[3/4] bg-muted overflow-hidden">
                     {member.photo ? (
-                      <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
-                    ) : null}
-                    <AvatarFallback className="bg-gradient-to-br from-secondary to-accent text-white font-bold text-2xl">
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {expandedBios[index] ? member.bio : truncateText(member.bio)}
-                  </p>
-                  <button
-                    onClick={() => toggleBio(index)}
-                    className="text-secondary hover:text-secondary/80 font-medium text-sm mb-4 transition-colors"
-                  >
-                    {expandedBios[index] ? "Read less" : "Read more"}
-                  </button>
-                  <h3 className="font-semibold text-lg mb-2">{member.name}</h3>
-                  <p className="text-muted-foreground font-medium text-sm">{member.role}</p>
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+                        <span className="text-white font-bold text-6xl">
+                          {member.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Info Section */}
+                  <div className="p-6 text-center">
+                    <h3 className="font-semibold text-xl mb-1 text-secondary">{member.name}</h3>
+                    <p className="text-muted-foreground font-medium text-sm mb-4">{member.role}</p>
+                    
+                    <p className="text-muted-foreground text-sm mb-3 text-left">
+                      {expandedBios[index] ? member.bio : truncateText(member.bio)}
+                    </p>
+                    <button
+                      onClick={() => toggleBio(index)}
+                      className="text-secondary hover:text-secondary/80 font-medium text-sm transition-colors"
+                    >
+                      {expandedBios[index] ? "Read less" : "Read more"}
+                    </button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
