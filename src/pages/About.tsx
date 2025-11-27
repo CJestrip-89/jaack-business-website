@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Users, Handshake, Award, TrendingUp } from "lucide-react";
 import jerryPhoto from "@/assets/team-jerry.jpg";
+import albertPhoto from "@/assets/team-albert.jpg";
 
 const About = () => {
   const [expandedBios, setExpandedBios] = useState<{ [key: number]: boolean }>({});
@@ -145,7 +146,7 @@ const About = () => {
                 name: "Albert Francois",
                 role: "Founder and CFO",
                 bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to Jaack & co.",
-                photo: undefined,
+                photo: albertPhoto,
               },
               {
                 name: "Alex Jean",
