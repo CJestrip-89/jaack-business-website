@@ -14,7 +14,7 @@ const Footer = () => {
               <img src={jaackLogo} alt="JAACK & CO Logo" className="h-16 w-auto opacity-90 filter brightness-110" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
-              Connecting ambitious Small Enterprises with impact-driven investors for sustainable growth and meaningful
+              Connecting ambitious small enterprises with impact-driven investors for sustainable growth and meaningful
               partnerships.
             </p>
           </div>
