@@ -92,6 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/80">
+          <p>Affiliated Institution: US Commerce Bank</p>
           <p>&copy; {currentYear} JAACK & CO. All rights reserved.</p>
         </div>
       </div>
