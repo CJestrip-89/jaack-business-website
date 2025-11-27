@@ -12,8 +12,8 @@ const Navigation = () => {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   const NavLinks = ({ mobile = false, onClose = () => {} }) => (
@@ -24,9 +24,7 @@ const Navigation = () => {
           to={item.href}
           onClick={onClose}
           className={`transition-colors hover:text-secondary ${
-            location.pathname === item.href 
-              ? "text-secondary font-semibold" 
-              : "text-foreground"
+            location.pathname === item.href ? "text-secondary font-semibold" : "text-foreground"
           } ${mobile ? "block py-2 text-lg" : "text-sm md:text-sm lg:text-base"}`}
         >
           {item.label}
@@ -41,9 +39,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-14 md:h-16 lg:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 md:space-x-3">
-            <img 
-              src={jaackLogo} 
-              alt="JAACK & CO Logo" 
+            <img
+              src={jaackLogo}
+              alt="JAACK & CO Logo"
               className="h-16 md:h-18 lg:h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
           </Link>
@@ -56,7 +54,11 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
             <Link to="/businesses">
-              <Button variant="outline" size="sm" className="text-xs md:text-xs lg:text-sm px-2 md:px-3 lg:px-4 py-1.5 md:py-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs md:text-xs lg:text-sm px-2 md:px-3 lg:px-4 py-1.5 md:py-2"
+              >
                 For Businesses
               </Button>
             </Link>
@@ -84,9 +86,7 @@ const Navigation = () => {
                     </Button>
                   </Link>
                   <Link to="/investors" onClick={() => setIsOpen(false)}>
-                    <Button className="btn-hero w-full">
-                      For Investors
-                    </Button>
+                    <Button className="btn-hero w-full">For Investors</Button>
                   </Link>
                 </div>
               </div>
