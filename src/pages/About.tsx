@@ -157,7 +157,7 @@ const About = () => {
               <Card key={index} className="card-professional overflow-hidden">
                 <CardContent className="p-0">
                   {/* Photo Section */}
-                  <div className="relative w-full aspect-[3/4] bg-muted overflow-hidden">
+                  <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden">
                     {member.photo ? (
                       <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                     ) : (
