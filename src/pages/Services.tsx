@@ -15,7 +15,7 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">Comprehensive Business & Investment Services</h1>
             <p className="body-lg text-white/90">
-              Five core pillars designed to accelerate Small Enterprise growth and maximum investor returns
+              Five core pillars designed to accelerate small enterprise growth and maximum investor returns
             </p>
           </div>
         </div>
