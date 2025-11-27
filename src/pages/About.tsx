@@ -157,7 +157,7 @@ const About = () => {
               <Card key={index} className="card-professional overflow-hidden">
                 <CardContent className="p-0">
                   {/* Photo Section */}
-                  <div className="relative w-full aspect-[5/5] bg-muted overflow-hidden">
+                  <div className="relative w-full aspect-[4/5] bg-muted overflow-hidden">
                     {member.photo ? (
                       <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                     ) : (
@@ -171,12 +171,12 @@ const About = () => {
                       </div>
                     )}
                   </div>
-
+                  
                   {/* Info Section */}
                   <div className="p-6 text-center">
                     <h3 className="font-semibold text-xl mb-1 text-secondary">{member.name}</h3>
                     <p className="text-muted-foreground font-medium text-sm mb-4">{member.role}</p>
-
+                    
                     <p className="text-muted-foreground text-sm mb-3 text-left">
                       {expandedBios[index] ? member.bio : truncateText(member.bio)}
                     </p>
