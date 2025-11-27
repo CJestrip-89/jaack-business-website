@@ -2,7 +2,9 @@ import { useState } from "react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Users, Handshake, Award, TrendingUp } from "lucide-react";
+import jerryPhoto from "@/assets/team-jerry.jpg";
 
 const About = () => {
   const [expandedBios, setExpandedBios] = useState<{ [key: number]: boolean }>({});
@@ -33,7 +35,7 @@ const About = () => {
             <p className="body-lg text-white/90">
               Through our network and our institutional association with US Commerce Bank, we provide added credibility
               and access to reliable financial channels. We help clients secure non-traditional financing, build
-              partnerships, and grow their businesses with long-term stability.
+              partnerships, and grow their businesses with long-term stability.
             </p>
           </div>
         </div>
@@ -51,10 +53,6 @@ const About = () => {
                 investors feel secure and rewarded. Every decision is guided by responsibility, integrity, and a
                 commitment to building partnerships that last.
               </p>
-              {/* <p className="body-md text-muted-foreground">
-                We believe that with the right partnerships, every business has the potential to create lasting value
-                for all stakeholders.
-              </p> */}
             </div>
             <div>
               <h2 className="heading-lg mb-6">Our Vision</h2>
@@ -63,12 +61,8 @@ const About = () => {
                 high-performing businesses with strong fundamentals, real-world utility, and sustainable growth
                 potential. We aim to create environments where smart capital meets disciplined execution, where
                 businesses thrive through strategic support, and where every partnership is grounded in clarity,
-                accountability, and long-term value creation.
+                accountability, and long-term value creation.
               </p>
-              {/* <p className="body-md text-muted-foreground">
-                We envision a future where access to capital is matched with strategic expertise to accelerate
-                responsible business growth.
-              </p> */}
             </div>
           </div>
         </div>
@@ -144,29 +138,35 @@ const About = () => {
               {
                 name: "Jerry Lorseille",
                 role: "Founder and CEO",
-                bio: "Jerry Lorseille is a business strategist with a strong foundation in accounting, financial analysis and entrepreneurial leadership. He excels at identifying opportunities, designing scalable models and shaping the strategic direction of the firm. Jerry brings sharp analytical thinking and practical decision making to Jaack & co, ensuring bold vision is paired with disciplined execution and sustainable value creation.",
+                bio: "Jerry Lorseille is a business strategist with a strong foundation in accounting, financial analysis and entrepreneurial leadership. He excels at identifying opportunities, designing scalable models and shaping the strategic direction of the firm. Jerry brings sharp analytical thinking and practical decision making to Jaack & co, ensuring bold vision is paired with disciplined execution and sustainable value creation.",
+                photo: jerryPhoto,
               },
               {
                 name: "Albert Francois",
                 role: "Founder and CFO",
-                bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to Jaack & co.",
+                bio: "Albert Francois is a financial leader whose expertise in finance, capital structuring and investment evaluation drives the economic foundation of the firm. With a deep understanding of financial planning and risk optimization, he ensures that every business initiative is backed by strong fiscal discipline and intelligent capital deployment. Albert brings confidence, clarity and financial foresight to Jaack & co.",
+                photo: undefined,
               },
               {
                 name: "Alex Jean",
                 role: "Founder and COO",
-                bio: "Alex Jean is an operations and engineering specialist who transforms strategy into seamless execution. With a technical background and strong operational mindset, he builds efficient systems, optimizes processes and ensures reliable performance across every venture. Alex is the force that grounds vision into practical action, connecting engineering precision with real world operations.",
+                bio: "Alex Jean is an operations and engineering specialist who transforms strategy into seamless execution. With a technical background and strong operational mindset, he builds efficient systems, optimizes processes and ensures reliable performance across every venture. Alex is the force that grounds vision into practical action, connecting engineering precision with real world operations.",
+                photo: undefined,
               },
             ].map((member, index) => (
               <Card key={index} className="card-professional text-center">
                 <CardContent className="p-8">
-                  <div className="w-24 h-24 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">
+                  <Avatar className="w-24 h-24 mx-auto mb-4">
+                    {member.photo ? (
+                      <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
+                    ) : null}
+                    <AvatarFallback className="bg-gradient-to-br from-secondary to-accent text-white font-bold text-2xl">
                       {member.name
                         .split(" ")
                         .map((n) => n[0])
                         .join("")}
-                    </span>
-                  </div>
+                    </AvatarFallback>
+                  </Avatar>
                   <p className="text-muted-foreground text-sm mb-4">
                     {expandedBios[index] ? member.bio : truncateText(member.bio)}
                   </p>
