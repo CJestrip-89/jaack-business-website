@@ -26,11 +26,14 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-xl text-white mb-6">About Jaack & co</h1>
             <p className="body-lg text-white/90">
-              We are a private funding and business support company that helps small businesses secure capital and
-              expand their market reach. We operate as both a financial resource and a strategic growth partner. Our
-              focus is to bridge the gap between entrepreneurs who need funding and investors seeking meaningful
-              opportunities. We help clients access non traditional financing, build partnerships, and grow their
-              businesses with long term stability.
+              We are a private funding and business support company helping small businesses secure capital and expand
+              their market reach. We operate as both a financial resource and a strategic growth partner. Our mission is
+              to bridge the gap between entrepreneurs who need funding and investors seeking meaningful opportunities.
+            </p>
+            <p className="body-lg text-white/90">
+              Through our network and our institutional association with US Commerce Bank, we provide added credibility
+              and access to reliable financial channels. We help clients secure non-traditional financing, build
+              partnerships, and grow their businesses with long-term stability.
             </p>
           </div>
         </div>
