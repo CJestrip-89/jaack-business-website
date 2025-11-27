@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Users, Handshake, Award, TrendingUp } from "lucide-react";
 import jerryPhoto from "@/assets/team-jerry.jpg";
 import albertPhoto from "@/assets/team-albert.jpg";
+import alexPhoto from "@/assets/team-alex.jpg";
 
 const About = () => {
   const [expandedBios, setExpandedBios] = useState<{ [key: number]: boolean }>({});
@@ -152,7 +153,7 @@ const About = () => {
                 name: "Alex Jean",
                 role: "Founder and COO",
                 bio: "Alex Jean is an operations and engineering specialist who transforms strategy into seamless execution. With a technical background and strong operational mindset, he builds efficient systems, optimizes processes and ensures reliable performance across every venture. Alex is the force that grounds vision into practical action, connecting engineering precision with real world operations.",
-                photo: undefined,
+                photo: alexPhoto,
               },
             ].map((member, index) => (
               <Card key={index} className="card-professional overflow-hidden">
